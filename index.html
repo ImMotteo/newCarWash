@@ -1,0 +1,1327 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Новая Мойка — Автомойка и детейлинг в Санкт-Петербурге</title>
+    <meta
+      name="description"
+      content="Автомойка и детейлинг в Санкт-Петербурге: бережная мойка, химчистка салона, полировка, керамика, шумоизоляция. Обучение детейлингу. Звоните!"
+    />
+    <meta
+      name="keywords"
+      content="автомойка спб, детейлинг спб, химчистка салона, полировка кузова, керамическое покрытие, шумоизоляция, обучение детейлингу"
+    />
+    <meta name="author" content="Новая Мойка" />
+    <meta name="theme-color" content="#060809" />
+    <link rel="canonical" href="https://novaya-moyka.ru/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:title" content="Новая Мойка — Автомойка и детейлинг" />
+    <meta
+      property="og:description"
+      content="Профессиональная мойка и детейлинг по доступным ценам. Обучение детейлингу."
+    />
+    <meta property="og:image" content="src/img/og-preview.jpg" />
+    <meta property="og:url" content="https://novaya-moyka.ru/" />
+
+
+
+    <link rel="stylesheet" href="src/main.css" />
+    <link rel="icon" href="src/img/favicon.ico" />
+
+    <!-- Микроразметка для поисковиков -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoWash",
+        "name": "Новая Мойка",
+        "image": "src/img/og-preview.jpg",
+        "url": "https://novaya-moyka.ru/",
+        "telephone": "+7 (999) 000-00-00",
+        "priceRange": "₽₽",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Санкт-Петербург",
+          "streetAddress": "Костромской просп., 62",
+          "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Su 09:00-22:00",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "120"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="header">
+      <div class="container header__container">
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <a href="#welcome" class="logo header__logo" aria-label="На главную">
+          <img src="src/img/logo.png" alt="Новая Мойка" />
+        </a>
+
+        <nav class="nav" id="main-nav" aria-label="Основная навигация">
+          <ul class="nav__list">
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#training">Обучение</a></li>
+            <li><a href="#works">Работы</a></li>
+            <li><a href="#studio">Студия</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__phone">
+          <a href="tel:+79990000000" class="btn elem--accent">Позвонить</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Первый экран -->
+    <section class="welcome" id="welcome">
+      <div class="hero">
+        <div class="container hero__container">
+          <div class="hero__text" data-animate>
+            <h1>
+              Автомойка и детейлинг
+              <span class="font--accent">По доступным ценам</span>
+            </h1>
+            <a href="tel:+79990000000" class="btn elem--accent">Позвонить</a>
+          </div>
+
+          <!-- Отзывы (карусель) -->
+          <div class="reviews" id="reviews" data-animate>
+            <div class="reviews__header">
+              <h2>
+                Отзывы о нас на Яндекс картах
+                <span class="reviews__star">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="m7.985 11.65-3.707 2.265a.546.546 0 0 1-.814-.598l1.075-4.282L1.42 6.609a.546.546 0 0 1 .29-.976l4.08-.336 1.7-3.966a.546.546 0 0 1 1.004.001l1.687 3.965 4.107.337c.496.04.684.67.29.976l-3.131 2.425 1.073 4.285a.546.546 0 0 1-.814.598z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="font--accent">5.0</span>
+                </span>
+              </h2>
+              <div class="reviews__controls">
+                <button
+                  class="reviews__arrow reviews__arrow--prev"
+                  aria-label="Назад"
+                >
+                  ‹
+                </button>
+                <button
+                  class="reviews__arrow reviews__arrow--next"
+                  aria-label="Вперёд"
+                >
+                  ›
+                </button>
+              </div>
+            </div>
+
+            <div class="reviews__track" data-slider-track>
+              <article class="review">
+                <div class="review__top">
+                  <img
+                    class="review__avatar"
+                    src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+                    alt="Аватар"
+                    loading="lazy"
+                  />
+                  <div class="review__info">
+                    <div class="review__author">София</div>
+                    <div class="review__date">2 июня</div>
+                  </div>
+                </div>
+                <div class="review__rating">★★★★★</div>
+                <p class="review__text">
+                  Огромная благодарность за работу, всё настолько чисто, как
+                  будто чистая новая машина. Ещё подсказали, как решить пару
+                  вопросов по машине. Покрыли колёса блёстками — обязательно
+                  вернусь и порекомендую друзьям!
+                </p>
+              </article>
+
+              <article class="review">
+                <div class="review__top">
+                  <img
+                    class="review__avatar"
+                    src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+                    alt="Аватар"
+                    loading="lazy"
+                  />
+                  <div class="review__info">
+                    <div class="review__author">Тишкевич Евгения</div>
+                    <div class="review__date">15 августа</div>
+                  </div>
+                </div>
+                <div class="review__rating">★★★★★</div>
+                <p class="review__text">
+                  Отлично вымыли машину, всё чисто, побрызгали приятным ароматом
+                  в салон, дали советы по уходу. Отличный сервис, адекватные
+                  цены, вернусь обязательно.
+                </p>
+              </article>
+
+              <article class="review">
+                <div class="review__top">
+                  <img
+                    class="review__avatar"
+                    src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+                    alt="Аватар"
+                    loading="lazy"
+                  />
+                  <div class="review__info">
+                    <div class="review__author">Дмитрий К.</div>
+                    <div class="review__date">08.03.2025</div>
+                  </div>
+                </div>
+                <div class="review__rating">★★★★☆</div>
+                <p class="review__text">
+                  Всё хорошо, но немного долго ждал своей очереди. В остальном
+                  претензий нет, чисто и аккуратно.
+                </p>
+              </article>
+
+              <article class="review">
+                <div class="review__top">
+                  <img
+                    class="review__avatar"
+                    src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+                    alt="Аватар"
+                    loading="lazy"
+                  />
+                  <div class="review__info">
+                    <div class="review__author">Ольга В.</div>
+                    <div class="review__date">05.03.2025</div>
+                  </div>
+                </div>
+                <div class="review__rating">★★★★★</div>
+                <p class="review__text">
+                  Лучшая мойка в городе! Делают детейлинг на высшем уровне.
+                  Спасибо мастеру Сергею!
+                </p>
+              </article>
+
+              <article class="review">
+                <div class="review__top">
+                  <img
+                    class="review__avatar"
+                    src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+                    alt="Аватар"
+                    loading="lazy"
+                  />
+                  <div class="review__info">
+                    <div class="review__author">Игорь М.</div>
+                    <div class="review__date">02.03.2025</div>
+                  </div>
+                </div>
+                <div class="review__rating">★★★★★</div>
+                <p class="review__text">
+                  Приятно удивлён качеством полировки. Машина как новая.
+                  Обязательно приеду снова!
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section__title font--accent" data-animate>О нас</h2>
+
+        <ul class="stats">
+          <li class="stats__item" data-animate>
+            <span class="stats__value">2018</span>
+            <span class="stats__label">работаем с этого года</span>
+          </li>
+          <li class="stats__item" data-animate style="--delay: 0.1s">
+            <span class="stats__value">12 500+</span>
+            <span class="stats__label">довольных клиентов</span>
+          </li>
+          <li class="stats__item" data-animate style="--delay: 0.2s">
+            <span class="stats__value">5.0</span>
+            <span class="stats__label">средняя оценка на картах</span>
+          </li>
+          <li class="stats__item" data-animate style="--delay: 0.3s">
+            <span class="stats__value">7</span>
+            <span class="stats__label">мастеров в команде</span>
+          </li>
+        </ul>
+
+        <p class="about__text" data-animate>
+          Мы — команда, которая любит машины и уважает чужое время.
+          Предоставляем полный спектр услуг : химчистка, полировка, оклейка
+          пленкой , шумоизоляция, тонировка , наносим так же керамику , жидкое
+          стекло ! Наша команда делает качественно свою работу, мы не жалеем сил
+          чтобы ваш автомобиль выглядел как новый ! Убираем плесень , отмываем
+          утопленников и машины побывавшие в пожарах . Оклеим ваш автомобиль
+          качественной пленкой с хорошими микронами (190 , а можно и больше ),
+          аккуратно подвернем все углы. Так мы сделаем салон вашего автомобиля
+          тихим и приятным , опыт в шумоизоляции у нас более 7 лет ! Мы
+          разобрали и собрали больше 1000 машин и знаем все нюансы - слабые и
+          сильные стороны сборки и разборки . Мы не экономим на материалах,
+          качество превыше всего !
+        </p>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services section" id="services">
+      <div class="container">
+        <h2 class="section__title font--accent" data-animate>Наши услуги</h2>
+        <p class="section__lead" data-animate>
+          Нажмите на карточку, чтобы узнать подробности
+        </p>
+
+        <div class="services__grid" id="servicesGrid">
+          <button
+            class="service-item"
+            data-order="1"
+            data-service="wash-2phase"
+            data-animate
+          >
+            <span
+              class="service-item__bg"
+              style="background-image: url(&quot;src/img/двухфазная_мойка.jpg&quot;)"
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Двухфазная мойка</span>
+              <span class="service-item__price">1 200 — 2 000 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="2"
+            data-service="wash-premium"
+            data-animate
+            style="--delay: 0.05s"
+          >
+            <span
+              class="service-item__bg"
+              style="background-image: url(&quot;src/img/мойка.jpg&quot;)"
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Премиум мойка</span>
+              <span class="service-item__price">от 5 000 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="3"
+            data-service="wash-luxe"
+            data-animate
+            style="--delay: 0.1s"
+          >
+            <span
+              class="service-item__bg"
+              style="background-image: url(&quot;src/img/мойка.jpg&quot;)"
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Двухфазный Люкс</span>
+              <span class="service-item__price">от 2 400 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="4"
+            data-service="body-chem"
+            data-animate
+            style="--delay: 0.15s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(src/img/мойка.jpg);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Химчистка кузова</span>
+              <span class="service-item__price">от 4 500 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="5"
+            data-service="interior-light"
+            data-animate
+            style="--delay: 0.2s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(src/img/химчистка.jpg);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Лёгкая химчистка салона</span>
+              <span class="service-item__price">от 4 500 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="6"
+            data-service="interior-full"
+            data-animate
+            style="--delay: 0.25s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(src/img/химчистка.jpg);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Химчистка салона</span>
+              <span class="service-item__price">от 17 000 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="7"
+            data-service="glass-polish"
+            data-animate
+            style="--delay: 0.3s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(&quot;src/img/полировка_стёкол.jpg&quot;);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Полировка стёкол</span>
+              <span class="service-item__price">от 9 000 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="8"
+            data-service="polish-ceramic"
+            data-animate
+            style="--delay: 0.35s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(src/img/полировка_керамика.jpg);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Полировка + керамика</span>
+              <span class="service-item__price">от 23 000 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="9"
+            data-service="suspension-wash"
+            data-animate
+            style="--delay: 0.4s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(src/img/мойка_подвески.jpg);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Мойка подвески</span>
+              <span class="service-item__price">от 3 500 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="10"
+            data-service="pre-sale"
+            data-animate
+            style="--delay: 0.45s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(src/img/химчистка.jpg);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Предпродажная подготовка</span>
+              <span class="service-item__price">от 6 000 ₽</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="11"
+            data-service="wrap"
+            data-animate
+            style="--delay: 0.5s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(src/img/оклейка.jpg);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Оклейка плёнкой</span>
+              <span class="service-item__price">по договорённости</span>
+            </span>
+          </button>
+
+          <button
+            class="service-item"
+            data-order="12"
+            data-service="soundproof"
+            data-animate
+            style="--delay: 0.55s"
+          >
+            <span
+              class="service-item__bg"
+              style="
+                background-image: url(src/img/шумоизоляция.jpg);
+              "
+            ></span>
+            <span class="service-item__body">
+              <span class="service-item__title">Шумоизоляция</span>
+              <span class="service-item__price">от 30 000 ₽</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="services__toggle-wrap">
+          <button
+            class="btn services__toggle"
+            id="servicesToggle"
+            type="button"
+          >
+            Смотреть все
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Обучение детейлингу -->
+    <section class="training section" id="training">
+        <div class="training__banner" data-animate>
+          <div
+            class="training__bg"
+            style="
+              background-image: url(src/img/обучение.jpeg);
+            "
+          ></div>
+          <div class="training__content container">
+            <span class="training__tag">Новое направление</span>
+            <h2 class="training__title">Обучение детейлингу</h2>
+            <p class="training__desc">
+              Индивидуальные и групповые курсы для тех, кто хочет освоить
+              профессию с нуля или прокачать уже имеющиеся навыки. Практика на
+              реальных авто, разбор химчистки, полировки и нанесения защитных
+              покрытий. Помогаем собрать стартовый набор химии и инструмента.
+            </p>
+            <a href="tel:+79990000000" class="btn elem--accent"
+              >Записаться на курс</a
+            >
+          </div>
+        </div>
+    </section>
+
+    <!-- Наши работы -->
+    <section class="works section" id="works">
+      <div class="container">
+        <h2 class="section__title font--accent" data-animate>Наши работы</h2>
+        <p class="section__lead" data-animate>
+          Нажмите на фото, чтобы рассмотреть поближе
+        </p>
+
+        <div class="works__grid">
+          <button
+            class="work work--tall"
+            data-lightbox="src/img/до_после_1.jpg"
+            data-animate
+          >
+            <img
+              src="src/img/до_после_1.jpg"
+              alt="Работа 1"
+              loading="lazy"
+            />
+            <span class="work__zoom">＋</span>
+          </button>
+          <button
+            class="work"
+            data-lightbox="src/img/до_после_1.jpg"
+            data-animate
+            style="--delay: 0.1s"
+          >
+            <img
+              src="src/img/до_после_1.jpg"
+              alt="Работа 2"
+              loading="lazy"
+            />
+            <span class="work__zoom">＋</span>
+          </button>
+          <button
+            class="work"
+            data-lightbox="src/img/до_после_1.jpg"
+            data-animate
+            style="--delay: 0.2s"
+          >
+            <img
+              src="src/img/до_после_1.jpg"
+              alt="Работа 3"
+              loading="lazy"
+            />
+            <span class="work__zoom">＋</span>
+          </button>
+          <button
+            class="work work--wide"
+            data-lightbox="src/img/до_после_1.jpg"
+            data-animate
+            style="--delay: 0.3s"
+          >
+            <img
+              src="src/img/до_после_1.jpg"
+              alt="Работа 4"
+              loading="lazy"
+            />
+            <span class="work__zoom">＋</span>
+          </button>
+          <button
+            class="work"
+            data-lightbox="src/img/до_после_1.jpg"
+            data-animate
+            style="--delay: 0.4s"
+          >
+            <img
+              src="src/img/до_после_1.jpg"
+              alt="Работа 5"
+              loading="lazy"
+            />
+            <span class="work__zoom">＋</span>
+          </button>
+          <button
+            class="work"
+            data-lightbox="src/img/до_после_1.jpg"
+            data-animate
+            style="--delay: 0.5s"
+          >
+            <img
+              src="src/img/до_после_1.jpg"
+              alt="Работа 6"
+              loading="lazy"
+            />
+            <span class="work__zoom">＋</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Наша студия -->
+    <section class="studio section" id="studio">
+      <div class="container">
+        <div class="gallery">
+          <div class="gallery__header">
+            <h2 class="section__title font--accent" data-animate>
+              Наша студия
+            </h2>
+            <div class="gallery__controls">
+              <button
+                class="reviews__arrow gallery__arrow--prev"
+                aria-label="Назад"
+              >
+                ‹
+              </button>
+              <button
+                class="reviews__arrow gallery__arrow--next"
+                aria-label="Вперёд"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery__track" data-slider-track>
+            <button
+              class="gallery__item"
+              data-lightbox="src/img/студия_1.jpg"
+            >
+              <img
+                src="src/img/студия_1.jpg"
+                alt="Студия 1"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              data-lightbox="src/img/студия_1.jpg"
+            >
+              <img
+                src="src/img/студия_1.jpg"
+                alt="Студия 2"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              data-lightbox="src/img/студия_1.jpg"
+            >
+              <img
+                src="src/img/студия_1.jpg"
+                alt="Студия 3"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              data-lightbox="src/img/студия_1.jpg"
+            >
+              <img
+                src="src/img/студия_1.jpg"
+                alt="Студия 4"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              data-lightbox="src/img/до_после_1.jpg"
+            >
+              <img
+                src="src/img/до_после_1.jpg"
+                alt="Студия 5"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts section" id="contacts">
+      <div class="container">
+        <h2 class="section__title font--accent" data-animate>Контакты</h2>
+
+        <div class="contacts__grid">
+          <div class="contacts__map" data-animate>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Addd325fbd63d8d962447bd7f2922ba67c8deb9bb736ea3461abeeb70e9baf322&amp;source=constructor"
+              title="Карта — Новая Мойка"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="contacts__info" data-animate style="--delay: 0.1s">
+            <ul class="contacts__list">
+              <li>
+                <span class="contacts__label">Адрес</span>
+                <span class="contacts__value"
+                  >Санкт-Петербург, Костромской просп., 62</span
+                >
+              </li>
+              <li>
+                <span class="contacts__label">Телефон</span>
+                <a class="contacts__value" href="tel:+79990000000"
+                  >+7 (999) 000-00-00</a
+                >
+              </li>
+              <li>
+                <span class="contacts__label">Режим работы</span>
+                <span class="contacts__value">Ежедневно 09:00 — 22:00</span>
+              </li>
+              <li>
+                <span class="contacts__label">Мессенджеры</span>
+                <span class="contacts__value">
+                  <a
+                    href="https://vk.ru/novayamoika"
+                    target="_blank"
+                    rel="noopener"
+                    >VK</a
+                  >
+                  ·
+                  <a href="https://max.ru" target="_blank" rel="noopener"
+                    >MAX</a
+                  >
+                </span>
+              </li>
+            </ul>
+
+            <a href="tel:+79990000000" class="btn elem--accent contacts__btn"
+              >Позвонить</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__col">
+          <img
+            class="footer__logo"
+            src="src/img/logo.png"
+            alt="Новая Мойка"
+            loading="lazy"
+          />
+          <p class="footer__text">
+            Автомойка и детейлинг в Санкт-Петербурге. Работаем с 2018 года.
+          </p>
+        </div>
+
+        <nav class="footer__col footer__nav" aria-label="Футер">
+          <span class="footer__title">Разделы</span>
+          <ul>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#training">Обучение</a></li>
+            <li><a href="#works">Работы</a></li>
+            <li><a href="#studio">Студия</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <span class="footer__title">Контакты</span>
+          <a href="tel:+79990000000">+7 (999) 000-00-00</a>
+          <a href="mailto:hello@novaya-moyka.ru">hello@novaya-moyka.ru</a>
+          <span>СПб, Костромской просп., 62</span>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <span
+            >© <span id="year"></span> Новая Мойка. Все права защищены.</span
+          >
+          <a href="src/privacy.html">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Модалка услуги -->
+    <div
+      class="service-modal"
+      id="serviceModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="service-modal__backdrop" data-close-modal></div>
+      <div class="service-modal__dialog">
+        <button
+          class="service-modal__close"
+          aria-label="Закрыть"
+          data-close-modal
+        >
+          ×
+        </button>
+        <div class="service-modal__image">
+          <img id="serviceModalImg" src="" alt="" />
+        </div>
+        <div class="service-modal__content">
+          <h3 class="service-modal__title" id="serviceModalTitle"></h3>
+          <p class="service-modal__desc" id="serviceModalDesc"></p>
+          <ul class="service-modal__list" id="serviceModalList"></ul>
+          <div class="service-modal__footer">
+            <span class="service-modal__price" id="serviceModalPrice"></span>
+            <a href="tel:+79990000000" class="btn elem--accent">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Лайтбокс для фото -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox__close" aria-label="Закрыть">×</button>
+      <img class="lightbox__img" src="" alt="" />
+    </div>
+
+    <script>
+      (function () {
+        const logo = document.querySelector(".header__logo img");
+        const welcome = document.querySelector(".welcome");
+        const header = document.querySelector("header");
+
+        const MAX_WIDTH = 280;
+        const MIN_WIDTH = 200;
+        const SCROLL_LIMIT = 200;
+        const DESKTOP = () => window.innerWidth > 992;
+
+        let ticking = false;
+
+        function updateHeader() {
+          if (DESKTOP() && logo) {
+            const scrollY = window.scrollY || window.pageYOffset;
+            const progress = Math.min(scrollY / SCROLL_LIMIT, 1);
+            const currentWidth = MAX_WIDTH - progress * (MAX_WIDTH - MIN_WIDTH);
+            logo.style.width = currentWidth + "px";
+          } else if (logo) {
+            logo.style.width = "";
+          }
+
+          if (welcome && header) {
+            const h = header.offsetHeight;
+            welcome.style.paddingTop = h + "px";
+          }
+        }
+
+        window.addEventListener("scroll", () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              updateHeader();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        });
+        window.addEventListener("resize", updateHeader);
+        updateHeader();
+
+        /* ------------------------------------------------------------------
+         Бургер-меню
+      ------------------------------------------------------------------ */
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav");
+
+        if (burger && nav) {
+          const closeMenu = () => {
+            nav.classList.remove("nav--open");
+            burger.classList.remove("burger--active");
+            burger.setAttribute("aria-expanded", "false");
+          };
+
+          burger.addEventListener("click", () => {
+            const open = nav.classList.toggle("nav--open");
+            burger.classList.toggle("burger--active");
+            burger.setAttribute("aria-expanded", open);
+          });
+
+          nav
+            .querySelectorAll("a")
+            .forEach((link) => link.addEventListener("click", closeMenu));
+
+          document.addEventListener("click", (e) => {
+            if (!nav.contains(e.target) && !burger.contains(e.target))
+              closeMenu();
+          });
+
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeMenu();
+          });
+        }
+
+        /* ------------------------------------------------------------------
+         Cлайдер
+      ------------------------------------------------------------------ */
+        function initSlider(track, prevBtn, nextBtn) {
+          if (!track) return;
+
+          const getStep = () => {
+            const first = track.firstElementChild;
+            if (!first) return 0;
+            const gap =
+              parseFloat(
+                getComputedStyle(track).columnGap ||
+                  getComputedStyle(track).gap,
+              ) || 16;
+            return first.offsetWidth + gap;
+          };
+
+          const slide = (dir) => {
+            const step = getStep() * (dir === "next" ? 1 : -1);
+            track.scrollBy({ left: step, behavior: "smooth" });
+          };
+
+          if (prevBtn) prevBtn.addEventListener("click", () => slide("prev"));
+          if (nextBtn) nextBtn.addEventListener("click", () => slide("next"));
+
+          const updateButtons = () => {
+            const max = track.scrollWidth - track.clientWidth;
+            if (prevBtn)
+              prevBtn.style.opacity = track.scrollLeft <= 2 ? "0.35" : "1";
+            if (nextBtn)
+              nextBtn.style.opacity =
+                track.scrollLeft >= max - 2 ? "0.35" : "1";
+          };
+
+          track.addEventListener("scroll", updateButtons, { passive: true });
+          window.addEventListener("resize", updateButtons);
+          setTimeout(updateButtons, 100);
+        }
+
+        initSlider(
+          document.querySelector("#reviews [data-slider-track]"),
+          document.querySelector(".reviews__arrow--prev"),
+          document.querySelector(".reviews__arrow--next"),
+        );
+
+        initSlider(
+          document.querySelector("#studio [data-slider-track]"),
+          document.querySelector(".gallery__arrow--prev"),
+          document.querySelector(".gallery__arrow--next"),
+        );
+
+        /* ------------------------------------------------------------------
+         Лайтбокс
+      ------------------------------------------------------------------ */
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = lightbox?.querySelector(".lightbox__img");
+        const lightboxClose = lightbox?.querySelector(".lightbox__close");
+
+        const openLightbox = (src, alt = "") => {
+          if (!lightbox || !lightboxImg) return;
+          lightboxImg.src = src;
+          lightboxImg.alt = alt;
+          lightbox.classList.add("lightbox--open");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        };
+
+        const closeLightbox = () => {
+          if (!lightbox) return;
+          lightbox.classList.remove("lightbox--open");
+          lightbox.setAttribute("aria-hidden", "true");
+          lightboxImg.src = "";
+          document.body.style.overflow = "";
+        };
+
+        document.querySelectorAll("[data-lightbox]").forEach((el) => {
+          el.addEventListener("click", () => {
+            const src = el.getAttribute("data-lightbox");
+            const img = el.querySelector("img");
+            openLightbox(src, img?.alt);
+          });
+        });
+
+        lightboxClose?.addEventListener("click", closeLightbox);
+        lightbox?.addEventListener("click", (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeLightbox();
+        });
+
+        /* ------------------------------------------------------------------
+         Модалка
+      ------------------------------------------------------------------ */
+        const SERVICES = {
+          "wash-2phase": {
+            title: "Двухфазная мойка",
+            price: "1 200 — 2 000 ₽",
+            img: "src/img/двухфазная_мойка.jpg",
+            desc: "Классика, с которой начинается любой уход. Наносим пену в два этапа: сначала активную — она размягчает грязь, потом мягкую — смывает остатки и не оставляет разводов. Кузов сушим турбиной, резину черним, стёкла протираем до идеала.",
+            list: [
+              "Мойка кузова в два этапа",
+              "Сушка турбиной",
+              "Очистка и чернение резины",
+              "Протирка стёкол и зеркал",
+              "Лёгкая уборка ковриков",
+            ],
+          },
+          "wash-premium": {
+            title: "Премиум мойка",
+            price: "от 5 000 ₽",
+            img: "src/img/мойка.jpg",
+            desc: "Расширенный комплекс для тех, кто хочет после мойки сесть в чистую машину. Помимо полного цикла по кузову делаем уборку салона, протираем панель, ароматизируем и обновляем вид подкапотного пространства.",
+            list: [
+              "Всё из двухфазной мойки",
+              "Уборка салона и багажника",
+              "Протирка пластика и панели",
+              "Чистка стёкол изнутри",
+              "Ароматизация салона",
+              "Уход за подкапотным пространством",
+            ],
+          },
+          "wash-luxe": {
+            title: "Двухфазный Люкс",
+            price: "от 2 400 ₽",
+            img: "src/img/мойка.jpg",
+            desc: "Мойка с усиленным уходом за лакокрасочным покрытием. После двойного нанесения пены наносим жидкий воск — он создаёт гидрофобный слой, с которым машина дольше остаётся чистой.",
+            list: [
+              "Двойное нанесение пены",
+              "Глубокая очистка ЛКП от налёта",
+              "Жидкий воск с гидрофобным эффектом",
+              "Сушка кузова турбиной",
+              "Чернение резины и подкрылков",
+            ],
+          },
+          "body-chem": {
+            title: "Химчистка кузова",
+            price: "от 4 500 ₽",
+            img: "src/img/мойка.jpg",
+            desc: "Убираем то, что обычная мойка не берёт: битум, следы реагентов, налёт от тополиных почек и следы от насекомых. Работаем по отдельным зонам, чтобы не повредить лак.",
+            list: [
+              "Удаление битумных пятен",
+              "Очистка от следов реагентов",
+              "Удаление следов насекомых и смолы",
+              "Мягкая глиняная обработка",
+              "Защитный воск по финишу",
+            ],
+          },
+          "interior-light": {
+            title: "Лёгкая химчистка салона",
+            price: "от 4 500 ₽",
+            img: "src/img/химчистка.jpg",
+            desc: "Экспресс-вариант для тех, у кого нет времени оставлять машину на весь день. Проходим по основным зонам: сиденья, ковролин, пластик, стёкла. Освежаем, но без полной разборки.",
+            list: [
+              "Сухая и влажная уборка сидений",
+              "Чистка ковролина и ковриков",
+              "Протирка пластика и панели",
+              "Чистка стёкол изнутри",
+              "Ароматизация салона",
+            ],
+          },
+          "interior-full": {
+            title: "Химчистка салона",
+            price: "от 17 000 ₽",
+            img: "src/img/химчистка.jpg",
+            desc: "Полный цикл с разборкой салона. Снимаем сиденья, чистим каждую щель, работаем с тканевой и кожаной обивкой отдельными составами. Возвращаем салону вид, близкий к заводскому.",
+            list: [
+              "Демонтаж и монтаж сидений",
+              "Глубокая чистка ткани и кожи",
+              "Очистка потолка и стоек",
+              "Уход за пластиком и кожей",
+              "Устранение запахов озоном",
+              "Сушка и финишная сборка",
+            ],
+          },
+          "glass-polish": {
+            title: "Полировка стёкол",
+            price: "от 9 000 ₽",
+            img: "src/img/полировка_стёкол.jpg",
+            desc: "Убираем водный камень, мелкие царапины и потёртости от щёток. После полировки стёкла становятся прозрачнее, а в дождь вода скатывается быстрее — обзор заметно улучшается.",
+            list: [
+              "Удаление водного камня",
+              "Полировка мелких царапин",
+              "Обработка боковых и задних стёкол",
+              "Гидрофобное покрытие",
+              "Финишная очистка",
+            ],
+          },
+          "polish-ceramic": {
+            title: "Полировка + керамика",
+            price: "от 23 000 ₽",
+            img: "src/img/полировка_керамика.jpg",
+            desc: "Комплекс для тех, кто хочет, чтобы машина долго выглядела как новая. Сначала убираем царапины и голограммы абразивной полировкой, потом наносим керамическое покрытие — оно защищает ЛКП от реагентов, ультрафиолета и мелких сколов.",
+            list: [
+              "Абразивная полировка ЛКП",
+              "Удаление голограмм и царапин",
+              "Обезжиривание поверхности",
+              "Нанесение керамики (2–3 года)",
+              "Полировка стёкол и фар",
+              "Финишный осмотр под лампой",
+            ],
+          },
+          "suspension-wash": {
+            title: "Мойка подвески",
+            price: "от 3 500 ₽",
+            img: "https://images.pexels.com/photos/297642/pexels-photo-297642.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            desc: "Очищаем днище, арки и скрытые полости от грязи и реагентов. Процедура полезная не только для внешнего вида, но и для металла — соль и грязь разъедают кузов снизу, если их вовремя не смывать.",
+            list: [
+              "Мойка арок и подкрылков",
+              "Очистка днища под давлением",
+              "Промывка скрытых полостей",
+              "Обработка антикоррозийным составом",
+            ],
+          },
+          "pre-sale": {
+            title: "Предпродажная подготовка",
+            price: "от 6 000 ₽",
+            img: "src/img/химчистка.jpg",
+            desc: "Приводим машину в товарный вид перед показом покупателю. Убираем следы эксплуатации, устраняем запахи, полируем мелкие царапины. Задача — чтобы покупатель увидел ухоженный автомобиль, а вы получили цену без торга.",
+            list: [
+              "Комплексная мойка кузова и салона",
+              "Полировка мелких царапин",
+              "Химчистка салона",
+              "Устранение запахов",
+              "Чернение резины и пластика",
+              "Финишная фотосессия (по желанию)",
+            ],
+          },
+          wrap: {
+            title: "Оклейка плёнкой",
+            price: "по договорённости",
+            img: "src/img/оклейка.jpg",
+            desc: "Два сценария: защита заводского ЛКП от сколов и царапин или полная смена цвета. Работаем с плёнками известных брендов, даём гарантию на поклейку. Стоимость зависит от площади и сложности кузова.",
+            list: [
+              "Антигравийная защита кузова",
+              "Полная или частичная оклейка",
+              "Смена цвета автомобиля",
+              "Работа с плёнками премиум-брендов",
+              "Гарантия на поклейку",
+            ],
+          },
+          soundproof: {
+            title: "Шумоизоляция",
+            price: "от 30 000 ₽",
+            img: "src/img/шумоизоляция.jpg",
+            desc: "Снижаем уровень шума, вибрации и гула в салоне. Работаем по зонам: двери, пол, арки, багажник, крыша. Комфортнее разговаривать, слушать музыку и просто ехать — особенно на трассе.",
+            list: [
+              "Шумоизоляция дверей",
+              "Обработка пола и арок",
+              "Изоляция багажника",
+              "Шумоизоляция крыши",
+              "Материалы проверенных брендов",
+            ],
+          },
+        };
+
+        const serviceModal = document.getElementById("serviceModal");
+        const serviceModalImg = document.getElementById("serviceModalImg");
+        const serviceModalTitle = document.getElementById("serviceModalTitle");
+        const serviceModalDesc = document.getElementById("serviceModalDesc");
+        const serviceModalList = document.getElementById("serviceModalList");
+        const serviceModalPrice = document.getElementById("serviceModalPrice");
+
+        const openServiceModal = (key) => {
+          const data = SERVICES[key];
+          if (!data || !serviceModal) return;
+
+          serviceModalImg.src = data.img;
+          serviceModalImg.alt = data.title;
+          serviceModalTitle.textContent = data.title;
+          serviceModalDesc.textContent = data.desc;
+          serviceModalPrice.textContent = data.price;
+          serviceModalList.innerHTML = data.list
+            .map((item) => `<li>${item}</li>`)
+            .join("");
+
+          serviceModal.classList.add("service-modal--open");
+          serviceModal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        };
+
+        const closeServiceModal = () => {
+          if (!serviceModal) return;
+          serviceModal.classList.remove("service-modal--open");
+          serviceModal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        };
+
+        document.querySelectorAll(".service-item").forEach((card) => {
+          card.addEventListener("click", () => {
+            const key = card.getAttribute("data-service");
+            if (key) openServiceModal(key);
+          });
+        });
+
+        document.querySelectorAll("[data-close-modal]").forEach((el) => {
+          el.addEventListener("click", closeServiceModal);
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeServiceModal();
+        });
+
+        /* ------------------------------------------------------------------
+         Кнопка «Смотреть все» для услуг
+      ------------------------------------------------------------------ */
+        const servicesGrid = document.getElementById("servicesGrid");
+        const servicesToggle = document.getElementById("servicesToggle");
+
+        if (servicesGrid && servicesToggle) {
+          servicesToggle.addEventListener("click", () => {
+            const expanded = servicesGrid.classList.toggle("is-expanded");
+            servicesToggle.textContent = expanded ? "Свернуть" : "Смотреть все";
+
+            if (!expanded) {
+              const section = document.getElementById("services");
+              if (section) {
+                const top =
+                  section.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top, behavior: "smooth" });
+              }
+            }
+          });
+        }
+
+        /* ------------------------------------------------------------------
+         Анимация появления секций при скролле
+      ------------------------------------------------------------------ */
+        const animated = document.querySelectorAll("[data-animate]");
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+          );
+          animated.forEach((el) => io.observe(el));
+        } else {
+          animated.forEach((el) => el.classList.add("is-visible"));
+        }
+
+        /* ------------------------------------------------------------------
+         Подсветка активного пункта меню при скролле
+      ------------------------------------------------------------------ */
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav__list a");
+
+        if (
+          "IntersectionObserver" in window &&
+          sections.length &&
+          navLinks.length
+        ) {
+          const navIO = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const id = entry.target.id;
+                  navLinks.forEach((l) =>
+                    l.classList.toggle(
+                      "active",
+                      l.getAttribute("href") === "#" + id,
+                    ),
+                  );
+                }
+              });
+            },
+            { rootMargin: "-45% 0px -50% 0px" },
+          );
+          sections.forEach((s) => navIO.observe(s));
+        }
+
+        const yearEl = document.getElementById("year");
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>
