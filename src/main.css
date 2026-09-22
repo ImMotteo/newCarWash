@@ -78,13 +78,13 @@ legend {
    ========================================================= */
 @font-face {
   font-family: "Rostov";
-  src: url("src/fonts/rostov/rostov.eot");
-  src: url("src/fonts/rostov/rostov.eot?#iefix") format("embedded-opentype"),
-    url("src/fonts/rostov/rostov.otf") format("opentype"),
-    url("src/fonts/rostov/rostov.svg") format("svg"),
-    url("src/fonts/rostov/rostov.ttf") format("truetype"),
-    url("src/fonts/rostov/rostov.woff") format("woff"),
-    url("src/fonts/rostov/rostov.woff2") format("woff2");
+  src: url("src/fonts/rostov.eot");
+  src: url("src/fonts/rostov.eot?#iefix") format("embedded-opentype"),
+    url("src/fonts/rostov.otf") format("opentype"),
+    url("src/fonts/rostov.svg") format("svg"),
+    url("src/fonts/rostov.ttf") format("truetype"),
+    url("src/fonts/rostov.woff") format("woff"),
+    url("src/fonts/rostov.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
