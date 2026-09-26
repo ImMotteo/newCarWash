@@ -94,7 +94,7 @@ legend {
    Переменные
    ========================================================= */
 :root {
-  --main-bg: #060809;
+  --main-bg: #050607;
   --main-color: #f7f7f6;
   --accent: #519b60;
   --accent-soft: rgba(81, 155, 96, 0.15);
@@ -103,7 +103,7 @@ legend {
   --main-radius: 12px;
   --second-radius: 8px;
   --header-h: 64px;
-  --container-pad: 1.25rem;
+  --container-pad: 1.5rem;
   --section-gap: 3.5rem;
 }
 
@@ -142,10 +142,15 @@ section[id] {
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
 }
-.section__lead {
+.section__lead, .reviews__lead {
   color: var(--muted);
   margin-bottom: 1.75rem;
   max-width: 42ch;
+}
+
+.reviews__lead {
+  max-width: none;
+  margin-right: var(--container-pad);
 }
 
 h1 {
@@ -305,6 +310,10 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 1.25rem;
 }
+.hero__left {
+  display: flex;
+  align-items: center;
+}
 
 /* =========================================================
    Карусель отзывов / галереи
@@ -338,6 +347,7 @@ h2 {
   display: flex;
   gap: 0.5rem;
   flex-shrink: 0;
+  margin-right: var(--container-pad);
 }
 .reviews__arrow {
   width: 2.25rem;
@@ -379,12 +389,23 @@ h2 {
   display: none;
 }
 
+/* Ссылки-обёртки в отзывах ведут себя как flex-элементы карусели */
+.reviews__track > a {
+  display: block;
+  flex: 0 0 78%;
+  scroll-snap-align: start;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+.reviews__track > a:hover .review {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
 /* =========================================================
    Карточка отзыва
    ========================================================= */
 .review {
-  flex: 0 0 78%;
-  scroll-snap-align: start;
+  height: 100%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--line);
   border-radius: var(--main-radius);
@@ -397,7 +418,6 @@ h2 {
 }
 .review:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 .review__top {
   display: flex;
@@ -405,18 +425,21 @@ h2 {
   gap: 0.75rem;
 }
 .review__avatar {
-  width: 42px;
-  height: 42px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--accent);
 }
 .review__info { display: flex; flex-direction: column; }
-.review__author { font-weight: 700; font-size: 1rem; }
+.review__author {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
 .review__date { font-size: 0.85rem; opacity: 0.6; }
 .review__rating { color: #ffcc00; letter-spacing: 2px; }
 .review__text {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.45;
   opacity: 0.9;
   flex: 1;
@@ -425,11 +448,32 @@ h2 {
 /* =========================================================
    Секция "О нас"
    ========================================================= */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+}
+.about__image {
+  border-radius: var(--main-radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  min-height: 260px;
+}
+.about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.9rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
 }
 .stats__item {
   padding: 1rem;
@@ -452,12 +496,13 @@ h2 {
   line-height: 1;
 }
 .stats__label {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: var(--muted);
 }
 .about__text {
   text-align: justify;
   color: var(--muted);
+  font-size: 1.3rem;
 }
 
 /* =========================================================
@@ -529,8 +574,6 @@ h2 {
   font-weight: 700;
 }
 
-/* Скрываем "лишние" карточки по умолчанию.
-   Мобильный (2 колонки): показываем 4 (2 полных ряда) */
 .service-item[data-order="5"],
 .service-item[data-order="6"],
 .service-item[data-order="7"],
@@ -541,11 +584,8 @@ h2 {
 .service-item[data-order="12"] {
   display: none;
 }
-
-/* Раскрытое состояние — показываем всё */
 .services__grid.is-expanded .service-item { display: block; }
 
-/* Кнопка «Смотреть все» */
 .services__toggle-wrap {
   display: flex;
   justify-content: center;
@@ -641,7 +681,6 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
-
 .service-modal__content {
   padding: 1.5rem 1.25rem 1.75rem;
   display: flex;
@@ -774,8 +813,6 @@ h2 {
   aspect-ratio: 1 / 1;
   cursor: zoom-in;
 }
-/* .work--tall { grid-row: span 2; aspect-ratio: auto; }
-.work--wide { grid-column: span 2; aspect-ratio: 16 / 9; } */
 .work img {
   width: 100%;
   height: 100%;
@@ -806,7 +843,7 @@ h2 {
 }
 
 /* =========================================================
-   Студия (галерея)
+   Студия
    ========================================================= */
 .gallery__item {
   flex: 0 0 80%;
@@ -930,12 +967,12 @@ h2 {
 .footer__bottom-inner a:hover { color: var(--accent); }
 
 /* =========================================================
-   Лайтбокс
+   Лайтбокс с навигацией
    ========================================================= */
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.92);
+  background: rgba(0, 0, 0, 0.94);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -951,19 +988,21 @@ h2 {
 }
 .lightbox__img {
   max-width: 100%;
-  max-height: 90vh;
+  max-height: 82vh;
   object-fit: contain;
   border-radius: var(--second-radius);
   transform: scale(0.95);
   transition: transform 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 .lightbox--open .lightbox__img { transform: scale(1); }
 .lightbox__close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
@@ -973,8 +1012,51 @@ h2 {
   align-items: center;
   justify-content: center;
   transition: background 0.25s ease;
+  z-index: 3;
 }
 .lightbox__close:hover { background: var(--accent); }
+
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.2s ease;
+  z-index: 3;
+  user-select: none;
+}
+.lightbox__nav:hover {
+  background: var(--accent);
+  transform: translateY(-50%) scale(1.05);
+}
+.lightbox__nav:active {
+  transform: translateY(-50%) scale(0.96);
+}
+.lightbox__nav--prev { left: 0.75rem; }
+.lightbox__nav--next { right: 0.75rem; }
+
+.lightbox__counter {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
 
 /* =========================================================
    Анимации появления при скролле
@@ -1002,7 +1084,7 @@ h2 {
    ≥ 480px
    ========================================================= */
 @media (min-width: 480px) {
-  .review { flex: 0 0 65%; }
+  .reviews__track > a { flex: 0 0 65%; }
   .gallery__item { flex: 0 0 65%; }
 
   .services__grid {
@@ -1014,7 +1096,7 @@ h2 {
 }
 
 /* =========================================================
-   ≥ 768px (планшет) — показываем 6 карточек (2 ряда по 3)
+   ≥ 768px (планшет)
    ========================================================= */
 @media (min-width: 768px) {
   :root {
@@ -1032,6 +1114,18 @@ h2 {
     gap: 2rem;
   }
 
+  /* О нас: две колонки */
+  .about__grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+  .about__image {
+    aspect-ratio: auto;
+    min-height: 420px;
+    height: 100%;
+  }
+
   .stats { grid-template-columns: repeat(4, 1fr); }
 
   .services__grid {
@@ -1042,7 +1136,6 @@ h2 {
   .service-item__body { padding: 1rem 1.15rem; }
   .service-item__title { font-size: 1.05rem; }
 
-  /* Показываем 5 и 6 карточки */
   .service-item[data-order="5"],
   .service-item[data-order="6"] { display: block; }
 
@@ -1065,7 +1158,6 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
-  /* .work--wide { grid-column: span 2; } */
 
   .contacts__grid {
     grid-template-columns: 1.1fr 1fr;
@@ -1082,12 +1174,21 @@ h2 {
     align-items: center;
   }
 
-  .review { flex: 0 0 320px; }
+  .reviews__track > a { flex: 0 0 320px; }
   .gallery__item { flex: 0 0 380px; }
+
+  .lightbox__nav {
+    width: 52px;
+    height: 52px;
+    font-size: 2rem;
+  }
+  .lightbox__nav--prev { left: 1.5rem; }
+  .lightbox__nav--next { right: 1.5rem; }
+  .lightbox__img { max-height: 88vh; }
 }
 
 /* =========================================================
-   ≥ 992px (десктоп) — показываем 8 карточек (2 ряда по 4)
+   ≥ 992px (десктоп)
    ========================================================= */
 @media (min-width: 992px) {
   :root {
@@ -1121,13 +1222,18 @@ h2 {
 
   .hero__container { gap: 3rem; }
 
+  .about__grid {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+  }
+  .about__image { min-height: 500px; }
+
   .services__grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.1rem;
   }
   .service-item { aspect-ratio: 3 / 4; }
 
-  /* Показываем 7 и 8 карточки */
   .service-item[data-order="7"],
   .service-item[data-order="8"] { display: block; }
 
@@ -1139,9 +1245,8 @@ h2 {
   .works__grid {
     grid-template-columns: repeat(4, 1fr);
   }
-  /* .work--wide { grid-column: span 2; } */
 
-  .review { flex: 0 0 360px; }
+  .reviews__track > a { flex: 0 0 360px; }
   .gallery__item { flex: 0 0 420px; }
 }
 
@@ -1156,13 +1261,131 @@ h2 {
    ≥ 1440px
    ========================================================= */
 @media (min-width: 1440px) {
-  :root { --container-pad: 4rem; }
+  :root { --container-pad: 6rem; }
 
   .container {
-    max-width: 1600px;
+    max-width: none;
   }
   .header__logo img { width: 280px; }
 
   .service-item__title { font-size: 1.1rem; }
   .service-item__price { font-size: 0.95rem; }
+
+  .about__grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 5rem;
+  }
+}
+
+/* =========================================================
+   ≥ 1920px
+   ========================================================= */
+@media (min-width: 1920px) {
+  :root { --container-pad: 8rem; }
+}
+
+/* =========================================================
+   Cookie-баннер
+   ========================================================= */
+
+.cookie-banner {
+  position: fixed;
+  left: var(--container-pad);
+  bottom: calc(var(--container-pad) + env(safe-area-inset-bottom, 0px));
+  z-index: 3000;
+  width: min(420px, calc(100vw - var(--container-pad) * 2));
+  background: rgba(14, 17, 19, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  border-radius: var(--main-radius);
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+  animation: cookie-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.6s; /* появляется не сразу — не бьёт по глазам при загрузке */
+}
+.cookie-banner[hidden] { display: none; }
+
+@keyframes cookie-pop {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cookie-banner__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cookie-banner__text {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.cookie-banner__text p { margin: 0; }
+.cookie-banner__text a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+.cookie-banner__text a:hover { color: var(--main-color); }
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.cookie-banner__btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: var(--second-radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+.cookie-banner__btn--accept {
+  background: var(--accent);
+  color: var(--main-color);
+}
+.cookie-banner__btn--accept:hover {
+  background: #62ab70;
+  transform: translateY(-1px);
+}
+.cookie-banner__btn--reject {
+  background: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--line);
+}
+.cookie-banner__btn--reject:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* На мобильных — карточка растягивается почти на всю ширину,
+   но отступы по краям остаются, чтобы она не выглядела как полоса */
+@media (max-width: 480px) {
+  .cookie-banner {
+    left: var(--container-pad);
+    right: var(--container-pad);
+    width: auto;
+  }
+}
+
+/* Кто отключил анимации — просто показываем без движения */
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

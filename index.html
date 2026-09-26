@@ -15,24 +15,71 @@
       content="автомойка спб, детейлинг спб, химчистка салона, полировка кузова, керамическое покрытие, шумоизоляция, обучение детейлингу"
     />
     <meta name="author" content="Новая Мойка" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#060809" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Новая Мойка" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <link rel="canonical" href="https://novaya-moyka.ru/" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph (VK, Facebook, Telegram, WhatsApp, Instagram DM) -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Новая Мойка" />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="og:title" content="Новая Мойка — Автомойка и детейлинг" />
+    <meta
+      property="og:title"
+      content="Новая Мойка — Автомойка и детейлинг в Санкт-Петербурге"
+    />
     <meta
       property="og:description"
+      content="Профессиональная мойка и детейлинг по доступным ценам. Химчистка, полировка, керамика, шумоизоляция. Обучение детейлингу."
+    />
+    <meta property="og:url" content="https://novaya-moyka.ru/" />
+    <meta
+      property="og:image"
+      content="https://novaya-moyka.ru/src/img/og-preview.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://novaya-moyka.ru/src/img/og-preview.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Автомойка и детейлинг Новая Мойка в Санкт-Петербурге"
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Новая Мойка — Автомойка и детейлинг" />
+    <meta
+      name="twitter:description"
       content="Профессиональная мойка и детейлинг по доступным ценам. Обучение детейлингу."
     />
-    <meta property="og:image" content="src/img/og-preview.jpg" />
-    <meta property="og:url" content="https://novaya-moyka.ru/" />
+    <meta
+      name="twitter:image"
+      content="https://novaya-moyka.ru/src/img/og-preview.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Новая Мойка — автомойка и детейлинг"
+    />
 
-
+    <!-- VK -->
+    <meta
+      property="vk:image"
+      content="https://novaya-moyka.ru/src/img/og-preview.jpg"
+    />
 
     <link rel="stylesheet" href="src/main.css" />
     <link rel="icon" href="src/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="src/img/apple-touch-icon.png" />
 
     <!-- Микроразметка для поисковиков -->
     <script type="application/ld+json">
@@ -40,7 +87,7 @@
         "@context": "https://schema.org",
         "@type": "AutoWash",
         "name": "Новая Мойка",
-        "image": "src/img/og-preview.jpg",
+        "image": "https://novaya-moyka.ru/src/img/og-preview.jpg",
         "url": "https://novaya-moyka.ru/",
         "telephone": "+7 (999) 000-00-00",
         "priceRange": "₽₽",
@@ -93,12 +140,18 @@
     <section class="welcome" id="welcome">
       <div class="hero">
         <div class="container hero__container">
-          <div class="hero__text" data-animate>
-            <h1>
-              Автомойка и детейлинг
-              <span class="font--accent">По доступным ценам</span>
-            </h1>
-            <a href="tel:+79990000000" class="btn elem--accent">Позвонить</a>
+          <div class="hero__left">
+            <div>
+              <div class="hero__text" data-animate>
+                <h1>
+                  Автомойка и детейлинг
+                  <span class="font--accent">По доступным ценам</span>
+                </h1>
+                <a href="tel:+79990000000" class="btn elem--accent"
+                  >Позвонить</a
+                >
+              </div>
+            </div>
           </div>
 
           <!-- Отзывы (карусель) -->
@@ -142,109 +195,323 @@
             </div>
 
             <div class="reviews__track" data-slider-track>
-              <article class="review">
-                <div class="review__top">
-                  <img
-                    class="review__avatar"
-                    src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
-                    alt="Аватар"
-                    loading="lazy"
-                  />
-                  <div class="review__info">
-                    <div class="review__author">София</div>
-                    <div class="review__date">2 июня</div>
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=51pz816k7mh85cc30auy2dmrm4&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">16 сентября</div>
+                    </div>
                   </div>
-                </div>
-                <div class="review__rating">★★★★★</div>
-                <p class="review__text">
-                  Огромная благодарность за работу, всё настолько чисто, как
-                  будто чистая новая машина. Ещё подсказали, как решить пару
-                  вопросов по машине. Покрыли колёса блёстками — обязательно
-                  вернусь и порекомендую друзьям!
-                </p>
-              </article>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Отличная мойка, очень качественно помыли машину, в подарок
+                    нанесли чернение резины Приехал по записи, сразу же заехал
+                    Место рекомендую, буду приезжать еще
+                  </p>
+                </article>
+              </a>
 
-              <article class="review">
-                <div class="review__top">
-                  <img
-                    class="review__avatar"
-                    src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
-                    alt="Аватар"
-                    loading="lazy"
-                  />
-                  <div class="review__info">
-                    <div class="review__author">Тишкевич Евгения</div>
-                    <div class="review__date">15 августа</div>
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=8pta4384z32gyn2pfqk3e3wxw0&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">15 сентября</div>
+                    </div>
                   </div>
-                </div>
-                <div class="review__rating">★★★★★</div>
-                <p class="review__text">
-                  Отлично вымыли машину, всё чисто, побрызгали приятным ароматом
-                  в салон, дали советы по уходу. Отличный сервис, адекватные
-                  цены, вернусь обязательно.
-                </p>
-              </article>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Прекрасная автомойка,прекрасный персонал,оч хорошо помыли!
+                    Мойка стоила свих денег!!! Рекомендую!!!
+                  </p>
+                </article>
+              </a>
 
-              <article class="review">
-                <div class="review__top">
-                  <img
-                    class="review__avatar"
-                    src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
-                    alt="Аватар"
-                    loading="lazy"
-                  />
-                  <div class="review__info">
-                    <div class="review__author">Дмитрий К.</div>
-                    <div class="review__date">08.03.2025</div>
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=6tt41jrkp7enw1pkmk9cuffbfm&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">2 июня</div>
+                    </div>
                   </div>
-                </div>
-                <div class="review__rating">★★★★☆</div>
-                <p class="review__text">
-                  Всё хорошо, но немного долго ждал своей очереди. В остальном
-                  претензий нет, чисто и аккуратно.
-                </p>
-              </article>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Огромная благодарность за работу, всё настолько чисто, как
+                    будто чистая новая машина. Ещё подсказали, как решить пару
+                    вопросов по машине. Покрыли колёса блёстками — обязательно
+                    вернусь и порекомендую друзьям!
+                  </p>
+                </article>
+              </a>
 
-              <article class="review">
-                <div class="review__top">
-                  <img
-                    class="review__avatar"
-                    src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
-                    alt="Аватар"
-                    loading="lazy"
-                  />
-                  <div class="review__info">
-                    <div class="review__author">Ольга В.</div>
-                    <div class="review__date">05.03.2025</div>
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=95p40g91v36tdjf659gw42m7ym&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">29 августа</div>
+                    </div>
                   </div>
-                </div>
-                <div class="review__rating">★★★★★</div>
-                <p class="review__text">
-                  Лучшая мойка в городе! Делают детейлинг на высшем уровне.
-                  Спасибо мастеру Сергею!
-                </p>
-              </article>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Помыл два авто, Мазду и Форестер. Все отлично, перед мойкой
+                    показали и рассказали, что можно сделать дополнительно,
+                    ничего не навязывали. Рекомендую. Для тех кто рядом, можно
+                    оставить авто и прийти как помочь, отзваниваются.
+                  </p>
+                </article>
+              </a>
 
-              <article class="review">
-                <div class="review__top">
-                  <img
-                    class="review__avatar"
-                    src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
-                    alt="Аватар"
-                    loading="lazy"
-                  />
-                  <div class="review__info">
-                    <div class="review__author">Игорь М.</div>
-                    <div class="review__date">02.03.2025</div>
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=dq7uf2r52hqh2jn4h8zkhrnh78&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">27 августа</div>
+                    </div>
                   </div>
-                </div>
-                <div class="review__rating">★★★★★</div>
-                <p class="review__text">
-                  Приятно удивлён качеством полировки. Машина как новая.
-                  Обязательно приеду снова!
-                </p>
-              </article>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Отличная мойка! Давно мою авто и мото, мойщики знают свое
+                    дело. Как понял из разговора, ранее имеют большой опыт
+                    работы в детейленге. Далее убедился сам, когда увидел как
+                    мыли мой авто в керамике.
+                  </p>
+                </article>
+              </a>
+
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=5fwd9umjxt69u9jxbjjd3xydmc&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">21 августа</div>
+                    </div>
+                  </div>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Мыла тут машину , я записалась заранее , приняли вовремя
+                    меня, и предупредили сколько будут мыть машину ,.машину
+                    отдали в срок , качеством мойки очень довольна! Буду ездить
+                    сюда постоянно))
+                  </p>
+                </article>
+              </a>
+
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=hm095g1trexg5q0qm6ajyubrfr&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">15 августа</div>
+                    </div>
+                  </div>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Отлично вымыли машину,все чисто ,побрызгали приятным
+                    ароматом салон,дали советы по уходу,отличный
+                    сервис,адекватные цены,вернусь обязательно,буду
+                    рекомендовать знакомым.
+                  </p>
+                </article>
+              </a>
+
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=uv4v1fr2zw38zxn80tc1vy3cf0&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">14 августа</div>
+                    </div>
+                  </div>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Отличная мойка, хороший сервис, адекватные цены, есть
+                    химчистка, очень рекомендую!
+                  </p>
+                </article>
+              </a>
+
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=22umde36gm1y3uxm8harmvghrr&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">11 августа</div>
+                    </div>
+                  </div>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Благодарю за вашу заботу о машине! Уж очень приятно потом
+                    сесть в чистый салон и погнать по делам, чувствуешь себя
+                    так, как если бы сама из салона красоты выпорхнула!
+                    Качественный и такой обходительный подход. Очень ценю.
+                  </p>
+                </article>
+              </a>
+
+              <a
+                href="https://yandex.ru/maps/org/77434897884/reviews?reviews%5BpublicId%5D=8wf2t0gv7nbh4bnwr224aumu8w&si=xpzb0ju072raph9hb4ndk7x66w&utm_source=review"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть отзыв на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">29 июля</div>
+                    </div>
+                  </div>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Заехали сюда случайно, по навигатору в поисках ближайшей
+                    свободной мойки. Попали к ребятам. Машину помыли настолько
+                    тщательно, что я её не узнала 🤣 спасибо огромное !!!! Очень
+                    приятно удивили, такой подход к работе заслуживает огромного
+                    уважения!!! Теперь буду специально сюда ездить.
+                  </p>
+                </article>
+              </a>
+
+              <a
+                href="https://yandex.ru/maps/org/novaya_moyka/77434897884/reviews/?ll=30.312581%2C60.026366&z=17"
+                target="_blank"
+                rel="noopener"
+                aria-label="Открыть все отзывы на Яндекс картах"
+              >
+                <article class="review">
+                  <div class="review__top">
+                    <img
+                      class="review__avatar"
+                      src="src/img/full_logo.png"
+                      alt="Аватар"
+                      loading="lazy"
+                    />
+                    <div class="review__info">
+                      <div class="review__author">Наш клиент</div>
+                      <div class="review__date">2 июня</div>
+                    </div>
+                  </div>
+                  <div class="review__rating">★★★★★</div>
+                  <p class="review__text">
+                    Вы можете посмотреть все отзывы на Яндекс картах
+                  </p>
+                </article>
+              </a>
             </div>
+            <p class="reviews__lead" style="font-size: 1rem">
+              Мы уважаем и ценим наших клиентов. В соответствии со 152 ФЗ, мы не
+              имеем права хранить личные данные пользователей, включая фотои и
+              имя. Вы можете открыть отзыв на картах, нажав на него
+            </p>
           </div>
         </div>
       </div>
@@ -254,40 +521,52 @@
     <section class="about section" id="about">
       <div class="container">
         <h2 class="section__title font--accent" data-animate>О нас</h2>
-
         <ul class="stats">
-          <li class="stats__item" data-animate>
+          <li class="stats__item">
             <span class="stats__value">2018</span>
             <span class="stats__label">работаем с этого года</span>
           </li>
-          <li class="stats__item" data-animate style="--delay: 0.1s">
+          <li class="stats__item">
             <span class="stats__value">12 500+</span>
             <span class="stats__label">довольных клиентов</span>
           </li>
-          <li class="stats__item" data-animate style="--delay: 0.2s">
+          <li class="stats__item">
             <span class="stats__value">5.0</span>
             <span class="stats__label">средняя оценка на картах</span>
           </li>
-          <li class="stats__item" data-animate style="--delay: 0.3s">
+          <li class="stats__item">
             <span class="stats__value">7</span>
             <span class="stats__label">мастеров в команде</span>
           </li>
         </ul>
+        <div class="about__grid">
+          <div class="about__content" data-animate>
+            <p class="about__text">
+              Мы — команда, влюблённая в автомобили и уважающая ваше время.
+              Предлагаем полный спектр детейлинг-услуг: химчистка, полировка,
+              оклейка плёнкой, шумоизоляция, тонировка, нанесение керамики и
+              жидкого стекла.
+              <br /><br />Мы работаем качественно и не жалеем сил, чтобы ваш
+              автомобиль выглядел как новый. Убираем плесень, отмываем
+              утопленников и машины, побывавшие в пожарах. <br /><br />Оклеим
+              ваш автомобиль качественной плёнкой с хорошими микронами (190 и
+              больше), аккуратно подвернём все углы. Сделаем салон тихим и
+              приятным. Наш опыт в шумоизоляции — более 7 лет! Мы разобрали и
+              собрали более 1000 машин и знаем все нюансы — слабые и сильные
+              стороны сборки и разборки. <br /><br />Мы не экономим на
+              материалах — качество превыше всего! Доверьте свой автомобиль нам
+              — и он снова будет радовать вас как новый!
+            </p>
+          </div>
 
-        <p class="about__text" data-animate>
-          Мы — команда, которая любит машины и уважает чужое время.
-          Предоставляем полный спектр услуг : химчистка, полировка, оклейка
-          пленкой , шумоизоляция, тонировка , наносим так же керамику , жидкое
-          стекло ! Наша команда делает качественно свою работу, мы не жалеем сил
-          чтобы ваш автомобиль выглядел как новый ! Убираем плесень , отмываем
-          утопленников и машины побывавшие в пожарах . Оклеим ваш автомобиль
-          качественной пленкой с хорошими микронами (190 , а можно и больше ),
-          аккуратно подвернем все углы. Так мы сделаем салон вашего автомобиля
-          тихим и приятным , опыт в шумоизоляции у нас более 7 лет ! Мы
-          разобрали и собрали больше 1000 машин и знаем все нюансы - слабые и
-          сильные стороны сборки и разборки . Мы не экономим на материалах,
-          качество превыше всего !
-        </p>
+          <div class="about__image" data-animate style="--delay: 0.15s">
+            <img
+              src="src/img/студия_1.jpg"
+              alt="Студия автомойки и детейлинга Новая Мойка"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -308,7 +587,9 @@
           >
             <span
               class="service-item__bg"
-              style="background-image: url(&quot;src/img/двухфазная_мойка.jpg&quot;)"
+              style="
+                background-image: url(&quot;src/img/двухфазная_мойка.jpg&quot;);
+              "
             ></span>
             <span class="service-item__body">
               <span class="service-item__title">Двухфазная мойка</span>
@@ -359,9 +640,7 @@
           >
             <span
               class="service-item__bg"
-              style="
-                background-image: url(src/img/мойка.jpg);
-              "
+              style="background-image: url(&quot;src/img/мойка.jpg&quot;)"
             ></span>
             <span class="service-item__body">
               <span class="service-item__title">Химчистка кузова</span>
@@ -378,9 +657,7 @@
           >
             <span
               class="service-item__bg"
-              style="
-                background-image: url(src/img/химчистка.jpg);
-              "
+              style="background-image: url(&quot;src/img/химчистка.jpg&quot;)"
             ></span>
             <span class="service-item__body">
               <span class="service-item__title">Лёгкая химчистка салона</span>
@@ -397,9 +674,7 @@
           >
             <span
               class="service-item__bg"
-              style="
-                background-image: url(src/img/химчистка.jpg);
-              "
+              style="background-image: url(&quot;src/img/химчистка.jpg&quot;)"
             ></span>
             <span class="service-item__body">
               <span class="service-item__title">Химчистка салона</span>
@@ -436,7 +711,7 @@
             <span
               class="service-item__bg"
               style="
-                background-image: url(src/img/полировка_керамика.jpg);
+                background-image: url(&quot;src/img/полировка_керамика.jpg&quot;);
               "
             ></span>
             <span class="service-item__body">
@@ -455,7 +730,7 @@
             <span
               class="service-item__bg"
               style="
-                background-image: url(src/img/мойка_подвески.jpg);
+                background-image: url(&quot;src/img/мойка_подвески.jpg&quot;);
               "
             ></span>
             <span class="service-item__body">
@@ -473,9 +748,7 @@
           >
             <span
               class="service-item__bg"
-              style="
-                background-image: url(src/img/химчистка.jpg);
-              "
+              style="background-image: url(&quot;src/img/химчистка.jpg&quot;)"
             ></span>
             <span class="service-item__body">
               <span class="service-item__title">Предпродажная подготовка</span>
@@ -492,9 +765,7 @@
           >
             <span
               class="service-item__bg"
-              style="
-                background-image: url(src/img/оклейка.jpg);
-              "
+              style="background-image: url(&quot;src/img/оклейка.jpg&quot;)"
             ></span>
             <span class="service-item__body">
               <span class="service-item__title">Оклейка плёнкой</span>
@@ -512,7 +783,7 @@
             <span
               class="service-item__bg"
               style="
-                background-image: url(src/img/шумоизоляция.jpg);
+                background-image: url(&quot;src/img/шумоизоляция.jpg&quot;);
               "
             ></span>
             <span class="service-item__body">
@@ -536,27 +807,25 @@
 
     <!-- Обучение детейлингу -->
     <section class="training section" id="training">
-        <div class="training__banner" data-animate>
-          <div
-            class="training__bg"
-            style="
-              background-image: url(src/img/обучение.jpeg);
-            "
-          ></div>
-          <div class="training__content container">
-            <span class="training__tag">Новое направление</span>
-            <h2 class="training__title">Обучение детейлингу</h2>
-            <p class="training__desc">
-              Индивидуальные и групповые курсы для тех, кто хочет освоить
-              профессию с нуля или прокачать уже имеющиеся навыки. Практика на
-              реальных авто, разбор химчистки, полировки и нанесения защитных
-              покрытий. Помогаем собрать стартовый набор химии и инструмента.
-            </p>
-            <a href="tel:+79990000000" class="btn elem--accent"
-              >Записаться на курс</a
-            >
-          </div>
+      <div class="training__banner" data-animate>
+        <div
+          class="training__bg"
+          style="background-image: url(&quot;src/img/обучение.jpeg&quot;)"
+        ></div>
+        <div class="training__content container">
+          <span class="training__tag">Новое направление</span>
+          <h2 class="training__title">Обучение детейлингу</h2>
+          <p class="training__desc">
+            Индивидуальные и групповые курсы для тех, кто хочет освоить
+            профессию с нуля или прокачать уже имеющиеся навыки. Практика на
+            реальных авто, разбор химчистки, полировки и нанесения защитных
+            покрытий. Помогаем собрать стартовый набор химии и инструмента.
+          </p>
+          <a href="tel:+79990000000" class="btn elem--accent"
+            >Записаться на курс</a
+          >
         </div>
+      </div>
     </section>
 
     <!-- Наши работы -->
@@ -572,12 +841,9 @@
             class="work work--tall"
             data-lightbox="src/img/до_после_1.jpg"
             data-animate
+            aria-label="Открыть фото 1"
           >
-            <img
-              src="src/img/до_после_1.jpg"
-              alt="Работа 1"
-              loading="lazy"
-            />
+            <img src="src/img/до_после_1.jpg" alt="Работа 1" loading="lazy" />
             <span class="work__zoom">＋</span>
           </button>
           <button
@@ -585,12 +851,9 @@
             data-lightbox="src/img/до_после_1.jpg"
             data-animate
             style="--delay: 0.1s"
+            aria-label="Открыть фото 2"
           >
-            <img
-              src="src/img/до_после_1.jpg"
-              alt="Работа 2"
-              loading="lazy"
-            />
+            <img src="src/img/до_после_1.jpg" alt="Работа 2" loading="lazy" />
             <span class="work__zoom">＋</span>
           </button>
           <button
@@ -598,12 +861,9 @@
             data-lightbox="src/img/до_после_1.jpg"
             data-animate
             style="--delay: 0.2s"
+            aria-label="Открыть фото 3"
           >
-            <img
-              src="src/img/до_после_1.jpg"
-              alt="Работа 3"
-              loading="lazy"
-            />
+            <img src="src/img/до_после_1.jpg" alt="Работа 3" loading="lazy" />
             <span class="work__zoom">＋</span>
           </button>
           <button
@@ -611,12 +871,9 @@
             data-lightbox="src/img/до_после_1.jpg"
             data-animate
             style="--delay: 0.3s"
+            aria-label="Открыть фото 4"
           >
-            <img
-              src="src/img/до_после_1.jpg"
-              alt="Работа 4"
-              loading="lazy"
-            />
+            <img src="src/img/до_после_1.jpg" alt="Работа 4" loading="lazy" />
             <span class="work__zoom">＋</span>
           </button>
           <button
@@ -624,12 +881,9 @@
             data-lightbox="src/img/до_после_1.jpg"
             data-animate
             style="--delay: 0.4s"
+            aria-label="Открыть фото 5"
           >
-            <img
-              src="src/img/до_после_1.jpg"
-              alt="Работа 5"
-              loading="lazy"
-            />
+            <img src="src/img/до_после_1.jpg" alt="Работа 5" loading="lazy" />
             <span class="work__zoom">＋</span>
           </button>
           <button
@@ -637,12 +891,9 @@
             data-lightbox="src/img/до_после_1.jpg"
             data-animate
             style="--delay: 0.5s"
+            aria-label="Открыть фото 6"
           >
-            <img
-              src="src/img/до_после_1.jpg"
-              alt="Работа 6"
-              loading="lazy"
-            />
+            <img src="src/img/до_после_1.jpg" alt="Работа 6" loading="lazy" />
             <span class="work__zoom">＋</span>
           </button>
         </div>
@@ -677,52 +928,37 @@
             <button
               class="gallery__item"
               data-lightbox="src/img/студия_1.jpg"
+              aria-label="Открыть фото студии 1"
             >
-              <img
-                src="src/img/студия_1.jpg"
-                alt="Студия 1"
-                loading="lazy"
-              />
+              <img src="src/img/студия_1.jpg" alt="Студия 1" loading="lazy" />
             </button>
             <button
               class="gallery__item"
               data-lightbox="src/img/студия_1.jpg"
+              aria-label="Открыть фото студии 2"
             >
-              <img
-                src="src/img/студия_1.jpg"
-                alt="Студия 2"
-                loading="lazy"
-              />
+              <img src="src/img/студия_1.jpg" alt="Студия 2" loading="lazy" />
             </button>
             <button
               class="gallery__item"
               data-lightbox="src/img/студия_1.jpg"
+              aria-label="Открыть фото студии 3"
             >
-              <img
-                src="src/img/студия_1.jpg"
-                alt="Студия 3"
-                loading="lazy"
-              />
+              <img src="src/img/студия_1.jpg" alt="Студия 3" loading="lazy" />
             </button>
             <button
               class="gallery__item"
               data-lightbox="src/img/студия_1.jpg"
+              aria-label="Открыть фото студии 4"
             >
-              <img
-                src="src/img/студия_1.jpg"
-                alt="Студия 4"
-                loading="lazy"
-              />
+              <img src="src/img/студия_1.jpg" alt="Студия 4" loading="lazy" />
             </button>
             <button
               class="gallery__item"
               data-lightbox="src/img/до_после_1.jpg"
+              aria-label="Открыть фото студии 5"
             >
-              <img
-                src="src/img/до_после_1.jpg"
-                alt="Студия 5"
-                loading="lazy"
-              />
+              <img src="src/img/до_после_1.jpg" alt="Студия 5" loading="lazy" />
             </button>
           </div>
         </div>
@@ -863,11 +1099,153 @@
       </div>
     </div>
 
-    <!-- Лайтбокс для фото -->
-    <div class="lightbox" id="lightbox" aria-hidden="true">
+    <!-- Лайтбокс для фото с навигацией -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
       <button class="lightbox__close" aria-label="Закрыть">×</button>
+      <button
+        class="lightbox__nav lightbox__nav--prev"
+        aria-label="Предыдущее фото"
+      >
+        ‹
+      </button>
       <img class="lightbox__img" src="" alt="" />
+      <button
+        class="lightbox__nav lightbox__nav--next"
+        aria-label="Следующее фото"
+      >
+        ›
+      </button>
+      <div class="lightbox__counter" id="lightboxCounter"></div>
     </div>
+
+    <!-- Cookie-баннер (показывается один раз, до загрузки Метрики) -->
+    <div
+      class="cookie-banner"
+      id="cookieBanner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Уведомление об использовании cookie"
+      hidden
+    >
+      <div class="cookie-banner__inner">
+        <div class="cookie-banner__text">
+          <p>
+            Мы используем cookie и Яндекс.Метрику, чтобы понимать, как
+            посетители пользуются сайтом. Это помогает нам делать его удобнее.
+            Подробнее — в
+            <a href="src/privacy.html">политике конфиденциальности</a>.
+          </p>
+        </div>
+        <div class="cookie-banner__actions">
+          <button
+            type="button"
+            class="cookie-banner__btn cookie-banner__btn--accept"
+            data-cookie-accept
+          >
+            Принять
+          </button>
+          <button
+            type="button"
+            class="cookie-banner__btn cookie-banner__btn--reject"
+            data-cookie-reject
+          >
+            Отклонить
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Яндекс.Метрика. Грузится только после согласия через cookie-баннер -->
+    <script>
+      (function () {
+        // ============================================================
+        // ЗАМЕНИТЕ 00000000 НА НОМЕР ВАШЕГО СЧЁТЧИКА МЕТРИКИ.
+        // Пока стоит 00000000 — счётчик не грузится, ничего не сломается.
+        // ============================================================
+        const METRIKA_ID = "00000000";
+
+        const STORAGE_KEY = "cookie-consent";
+        const banner = document.getElementById("cookieBanner");
+
+        let metrikaLoaded = false;
+
+        const loadMetrika = () => {
+          if (metrikaLoaded) return;
+          if (!METRIKA_ID || METRIKA_ID === 0) return; // номер не задан — не грузим
+          if (window.ym && typeof window.ym === "function" && window.ym.a)
+            return;
+
+          (function (m, e, t, r, i, k, a) {
+            m[i] =
+              m[i] ||
+              function () {
+                (m[i].a = m[i].a || []).push(arguments);
+              };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+              if (document.scripts[j].src === r) return;
+            }
+            k = e.createElement(t);
+            a = e.getElementsByTagName(t)[0];
+            k.async = 1;
+            k.src = r;
+            a.parentNode.insertBefore(k, a);
+          })(
+            window,
+            document,
+            "script",
+            "https://mc.yandex.ru/metrika/tag.js",
+            "ym",
+          );
+
+          window.ym(METRIKA_ID, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+          });
+
+          metrikaLoaded = true;
+        };
+
+        const setConsent = (value) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, value);
+          } catch (e) {}
+          if (banner) banner.hidden = true;
+          if (value === "accepted") loadMetrika();
+        };
+
+        let stored = null;
+        try {
+          stored = localStorage.getItem(STORAGE_KEY);
+        } catch (e) {}
+
+        if (stored === "accepted") {
+          // Пользователь уже соглашался ранее — грузим Метрику молча
+          loadMetrika();
+        } else if (!stored) {
+          // Первый визит или выбор ещё не сделан — показываем баннер
+          if (banner) banner.hidden = false;
+        }
+        // Если stored === "rejected" — ничего не делаем, ни баннера, ни Метрики.
+
+        if (banner) {
+          banner
+            .querySelector("[data-cookie-accept]")
+            ?.addEventListener("click", () => setConsent("accepted"));
+          banner
+            .querySelector("[data-cookie-reject]")
+            ?.addEventListener("click", () => setConsent("rejected"));
+        }
+      })();
+    </script>
 
     <script>
       (function () {
@@ -944,7 +1322,7 @@
         }
 
         /* ------------------------------------------------------------------
-         Cлайдер
+         Универсальный слайдер
       ------------------------------------------------------------------ */
         function initSlider(track, prevBtn, nextBtn) {
           if (!track) return;
@@ -995,16 +1373,83 @@
         );
 
         /* ------------------------------------------------------------------
-         Лайтбокс
+         Лайтбокс с навигацией (стрелки, клавиши, свайп)
+      ------------------------------------------------------------------ */
+        /* ------------------------------------------------------------------
+         Лайтбокс с навигацией (стрелки, клавиши, свайп)
+         Листает фото только внутри той секции, откуда его открыли
       ------------------------------------------------------------------ */
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = lightbox?.querySelector(".lightbox__img");
         const lightboxClose = lightbox?.querySelector(".lightbox__close");
+        const lightboxPrev = lightbox?.querySelector(".lightbox__nav--prev");
+        const lightboxNext = lightbox?.querySelector(".lightbox__nav--next");
+        const lightboxCounter = document.getElementById("lightboxCounter");
 
-        const openLightbox = (src, alt = "") => {
-          if (!lightbox || !lightboxImg) return;
-          lightboxImg.src = src;
-          lightboxImg.alt = alt;
+        const lightboxTriggers = Array.from(
+          document.querySelectorAll("[data-lightbox]"),
+        );
+
+        // Группируем триггеры по ближайшей секции с id.
+        // Каждая секция получает свой набор фото — листание не перескакивает между блоками.
+        const lightboxGroups = new Map();
+        lightboxTriggers.forEach((el) => {
+          const section = el.closest("section[id]");
+          const key = section ? section.id : "__global__";
+          if (!lightboxGroups.has(key)) lightboxGroups.set(key, []);
+          lightboxGroups.get(key).push({
+            trigger: el,
+            src: el.getAttribute("data-lightbox"),
+            alt: el.querySelector("img")?.alt || "",
+          });
+        });
+
+        // Текущее активное состояние: в какой группе и на каком индексе мы находимся
+        let currentGroupKey = null;
+        let currentIndex = -1;
+
+        const getCurrentGroup = () =>
+          currentGroupKey ? lightboxGroups.get(currentGroupKey) || [] : [];
+        const getGroupLength = () => getCurrentGroup().length;
+
+        const renderLightbox = () => {
+          if (!lightboxImg || currentIndex < 0) return;
+          const group = getCurrentGroup();
+          const item = group[currentIndex];
+          if (!item) return;
+
+          lightboxImg.src = item.src;
+          lightboxImg.alt = item.alt;
+
+          if (lightboxCounter) {
+            // Показываем счётчик только если в группе больше одного фото
+            lightboxCounter.textContent =
+              group.length > 1 ? currentIndex + 1 + " / " + group.length : "";
+          }
+
+          // Скрываем стрелки, если в группе всего одно фото
+          const single = group.length <= 1;
+          if (lightboxPrev)
+            lightboxPrev.style.display = single ? "none" : "flex";
+          if (lightboxNext)
+            lightboxNext.style.display = single ? "none" : "flex";
+        };
+
+        const openLightbox = (groupKey, index) => {
+          const group = lightboxGroups.get(groupKey);
+          if (
+            !lightbox ||
+            !lightboxImg ||
+            !group ||
+            index < 0 ||
+            index >= group.length
+          )
+            return;
+
+          currentGroupKey = groupKey;
+          currentIndex = index;
+          renderLightbox();
+
           lightbox.classList.add("lightbox--open");
           lightbox.setAttribute("aria-hidden", "false");
           document.body.style.overflow = "hidden";
@@ -1015,27 +1460,82 @@
           lightbox.classList.remove("lightbox--open");
           lightbox.setAttribute("aria-hidden", "true");
           lightboxImg.src = "";
+          currentGroupKey = null;
+          currentIndex = -1;
           document.body.style.overflow = "";
         };
 
-        document.querySelectorAll("[data-lightbox]").forEach((el) => {
-          el.addEventListener("click", () => {
-            const src = el.getAttribute("data-lightbox");
-            const img = el.querySelector("img");
-            openLightbox(src, img?.alt);
+        const showPrev = () => {
+          const len = getGroupLength();
+          if (len <= 1) return;
+          currentIndex = (currentIndex - 1 + len) % len;
+          renderLightbox();
+        };
+
+        const showNext = () => {
+          const len = getGroupLength();
+          if (len <= 1) return;
+          currentIndex = (currentIndex + 1) % len;
+          renderLightbox();
+        };
+
+        // Навешиваем обработчик на каждый триггер — запоминаем его группу и позицию в ней
+        lightboxGroups.forEach((items, groupKey) => {
+          items.forEach((item, index) => {
+            item.trigger.addEventListener("click", () =>
+              openLightbox(groupKey, index),
+            );
           });
         });
 
         lightboxClose?.addEventListener("click", closeLightbox);
+        lightboxPrev?.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showPrev();
+        });
+        lightboxNext?.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showNext();
+        });
+
         lightbox?.addEventListener("click", (e) => {
           if (e.target === lightbox) closeLightbox();
         });
+
         document.addEventListener("keydown", (e) => {
+          if (!lightbox?.classList.contains("lightbox--open")) return;
           if (e.key === "Escape") closeLightbox();
+          if (e.key === "ArrowLeft") showPrev();
+          if (e.key === "ArrowRight") showNext();
         });
 
+        /* Свайп по лайтбоксу на тач-устройствах */
+        let touchStartX = 0;
+        let touchStartY = 0;
+        lightbox?.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+          },
+          { passive: true },
+        );
+        lightbox?.addEventListener(
+          "touchend",
+          (e) => {
+            if (getGroupLength() <= 1) return;
+            const dx = e.changedTouches[0].screenX - touchStartX;
+            const dy = e.changedTouches[0].screenY - touchStartY;
+            if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+              if (dx < 0) showNext();
+              else showPrev();
+            }
+          },
+          { passive: true },
+        );
+
         /* ------------------------------------------------------------------
-         Модалка
+         Модалка услуги
       ------------------------------------------------------------------ */
         const SERVICES = {
           "wash-2phase": {
@@ -1148,7 +1648,7 @@
           "suspension-wash": {
             title: "Мойка подвески",
             price: "от 3 500 ₽",
-            img: "https://images.pexels.com/photos/297642/pexels-photo-297642.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            img: "src/img/мойка_подвески.jpg",
             desc: "Очищаем днище, арки и скрытые полости от грязи и реагентов. Процедура полезная не только для внешнего вида, но и для металла — соль и грязь разъедают кузов снизу, если их вовремя не смывать.",
             list: [
               "Мойка арок и подкрылков",
@@ -1290,7 +1790,7 @@
         }
 
         /* ------------------------------------------------------------------
-         Подсветка активного пункта меню при скролле
+         Подсветка активного пункта меню
       ------------------------------------------------------------------ */
         const sections = document.querySelectorAll("section[id]");
         const navLinks = document.querySelectorAll(".nav__list a");
