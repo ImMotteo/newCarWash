@@ -570,12 +570,12 @@ h2 {
    ========================================================= */
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--cards-gap);
 }
 .service-item {
   position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   border-radius: var(--main-radius);
   overflow: hidden;
   isolation: isolate;
@@ -623,13 +623,13 @@ h2 {
   gap: 0.3rem;
 }
 .service-item__title {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.25;
   color: var(--main-color);
 }
 .service-item__price {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--accent);
   font-weight: 700;
 }
@@ -1178,12 +1178,13 @@ h2 {
 }
 
 /* =========================================================
-   Мобильные (до 767px) — компактный hero и отзывы
+   Мобильные (до 767px) — компактный hero, отзывы,
+   стрелка в круге вместо волны, уменьшенные контролы карусели
    ========================================================= */
 @media (max-width: 767px) {
   .welcome {
     min-height: auto;
-    padding-bottom: 7rem;
+    padding-bottom: 4rem;
   }
 
   .hero h1 {
@@ -1192,6 +1193,28 @@ h2 {
     line-height: 1.05;
   }
 
+  /* На мобильном волну прячем полностью */
+  .welcome__wave {
+    display: none;
+  }
+
+  /* Стрелка — в круге, ближе к низу секции */
+  .welcome__arrow {
+    bottom: 24px;
+    width: 52px;
+    height: 52px;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    background: rgba(6, 8, 9, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .welcome__arrow svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Компактные карточки отзывов */
   .review {
     min-height: auto;
     padding: 0.85rem;
@@ -1209,6 +1232,17 @@ h2 {
   }
   .review__author {
     font-size: 0.95rem;
+  }
+
+  /* Контролы карусели — вдвое меньше */
+  .reviews__arrow {
+    width: 1.15rem;
+    height: 1.15rem;
+    font-size: 0.8rem;
+  }
+  .reviews__controls,
+  .works__controls {
+    gap: 0.35rem;
   }
 }
 
