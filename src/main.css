@@ -105,6 +105,7 @@ legend {
   --header-h: 64px;
   --container-pad: 1.5rem;
   --section-gap: 3.5rem;
+  --cards-gap: 1.5rem;
 }
 
 /* =========================================================
@@ -170,9 +171,9 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 1.5rem;
+  padding: 0.85rem 2rem;
   border-radius: var(--main-radius);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--main-color);
   white-space: nowrap;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -308,7 +309,7 @@ h2 {
 .hero h1 {
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 .hero__left {
   display: flex;
@@ -316,15 +317,64 @@ h2 {
 }
 
 /* =========================================================
-   Карусель отзывов / галереи
+   Welcome: волна по нижнему краю + кликабельная стрелка
    ========================================================= */
-.reviews, .gallery {
+.welcome__wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  display: block;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.welcome__arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  z-index: 2;
+  transform: translateX(-50%);
+  animation: welcome-arrow 2.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  transition: color 0.25s ease;
+}
+
+.welcome__arrow:hover {
+  color: var(--accent);
+}
+
+.welcome__arrow svg {
+  width: 28px;
+  height: 28px;
+}
+
+@keyframes welcome-arrow {
+  0%, 100% { transform: translate(-50%, 0);    opacity: 0.6; }
+  50%      { transform: translate(-50%, 12px); opacity: 1;   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome__arrow { animation: none; transform: translateX(-50%); }
+}
+
+/* =========================================================
+   Карусель отзывов
+   ========================================================= */
+.reviews {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   min-width: 0;
 }
-.reviews__header, .gallery__header {
+.reviews__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -343,7 +393,7 @@ h2 {
   gap: 0.2rem;
   color: #fc0;
 }
-.reviews__controls, .gallery__controls {
+.reviews__controls {
   display: flex;
   gap: 0.5rem;
   flex-shrink: 0;
@@ -372,10 +422,9 @@ h2 {
   transform: translateY(0) scale(0.96);
 }
 
-.reviews__track,
-.gallery__track {
+.reviews__track {
   display: flex;
-  gap: 1rem;
+  gap: var(--cards-gap);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -384,10 +433,7 @@ h2 {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.reviews__track::-webkit-scrollbar,
-.gallery__track::-webkit-scrollbar {
-  display: none;
-}
+.reviews__track::-webkit-scrollbar { display: none; }
 
 /* Ссылки-обёртки в отзывах ведут себя как flex-элементы карусели */
 .reviews__track > a {
@@ -406,7 +452,7 @@ h2 {
    ========================================================= */
 .review {
   height: 100%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--line);
   border-radius: var(--main-radius);
   padding: 1rem;
@@ -415,6 +461,7 @@ h2 {
   gap: 0.6rem;
   min-height: 170px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 .review:hover {
   transform: translateY(-4px);
@@ -438,11 +485,20 @@ h2 {
 }
 .review__date { font-size: 0.85rem; opacity: 0.6; }
 .review__rating { color: #ffcc00; letter-spacing: 2px; }
+
+/* Текст отзыва: обрезаем многоточием, если не влезает.
+   -webkit-line-clamp работает во всех современных браузерах.
+   Число 6 — максимальное число строк, дальше ставится «…». */
 .review__text {
   font-size: 1.3rem;
   line-height: 1.45;
   opacity: 0.9;
-  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: calc(1.45em * 6);
 }
 
 /* =========================================================
@@ -472,14 +528,14 @@ h2 {
 .stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.9rem;
-  margin-bottom: 2rem;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
 }
 .stats__item {
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: var(--main-radius);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -510,8 +566,8 @@ h2 {
    ========================================================= */
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--cards-gap);
 }
 .service-item {
   position: relative;
@@ -789,7 +845,7 @@ h2 {
 }
 .training__desc {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   line-height: 1.55;
 }
 .training__content .btn {
@@ -798,21 +854,51 @@ h2 {
 }
 
 /* =========================================================
-   Работы
+   Наши работы (карусель)
    ========================================================= */
-.works__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.works__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
   gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
+.works__header .section__title,
+.works__header .section__lead {
+  margin-bottom: 0;
+}
+.works__controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.works__track {
+  display: flex;
+  gap: var(--cards-gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.25rem 0 0.75rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.works__track::-webkit-scrollbar { display: none; }
+
 .work {
+  flex: 0 0 78%;
+  scroll-snap-align: start;
   position: relative;
   overflow: hidden;
   background-color: var(--muted);
   border-radius: var(--second-radius);
   aspect-ratio: 1 / 1;
   cursor: zoom-in;
+  transition: transform 0.3s ease;
 }
+.work:hover { transform: translateY(-4px); }
 .work img {
   width: 100%;
   height: 100%;
@@ -843,11 +929,14 @@ h2 {
 }
 
 /* =========================================================
-   Студия
+   Наша студия (сетка)
    ========================================================= */
+.studio__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--cards-gap);
+}
 .gallery__item {
-  flex: 0 0 80%;
-  scroll-snap-align: start;
   border-radius: var(--main-radius);
   overflow: hidden;
   aspect-ratio: 4 / 3;
@@ -868,7 +957,7 @@ h2 {
 .contacts__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 3rem;
 }
 .contacts__map {
   position: relative;
@@ -891,7 +980,8 @@ h2 {
 .contacts__list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  font-size: 1.5rem;
 }
 .contacts__list li {
   display: flex;
@@ -902,13 +992,11 @@ h2 {
 }
 .contacts__list li:last-child { border-bottom: 0; padding-bottom: 0; }
 .contacts__label {
-  font-size: 0.85rem;
   color: var(--muted);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .contacts__value {
-  font-size: 1.05rem;
   color: var(--main-color);
 }
 .contacts__btn {
@@ -921,7 +1009,7 @@ h2 {
 .footer {
   margin-top: var(--section-gap);
   border-top: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.04);
 }
 .footer__container {
   display: grid;
@@ -1085,14 +1173,15 @@ h2 {
    ========================================================= */
 @media (min-width: 480px) {
   .reviews__track > a { flex: 0 0 65%; }
-  .gallery__item { flex: 0 0 65%; }
 
   .services__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
   }
   .service-item { aspect-ratio: 4 / 5; }
   .service-item__title { font-size: 1rem; }
+
+  /* Работы: 2 карточки */
+  .work { flex: 0 0 calc((100% - var(--cards-gap)) / 2); }
 }
 
 /* =========================================================
@@ -1130,7 +1219,6 @@ h2 {
 
   .services__grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
   }
   .service-item { aspect-ratio: 3 / 4; }
   .service-item__body { padding: 1rem 1.15rem; }
@@ -1154,13 +1242,16 @@ h2 {
     min-height: 380px;
   }
 
-  .works__grid {
+  /* Работы: 3 карточки */
+  .work { flex: 0 0 calc((100% - var(--cards-gap) * 2) / 3); }
+
+  /* Студия: 3 колонки */
+  .studio__grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
   }
 
   .contacts__grid {
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: .7fr 1fr;
     align-items: stretch;
   }
 
@@ -1175,7 +1266,6 @@ h2 {
   }
 
   .reviews__track > a { flex: 0 0 320px; }
-  .gallery__item { flex: 0 0 380px; }
 
   .lightbox__nav {
     width: 52px;
@@ -1230,7 +1320,6 @@ h2 {
 
   .services__grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.1rem;
   }
   .service-item { aspect-ratio: 3 / 4; }
 
@@ -1242,12 +1331,15 @@ h2 {
     min-height: 420px;
   }
 
-  .works__grid {
+  /* Работы: 4 карточки */
+  .work { flex: 0 0 calc((100% - var(--cards-gap) * 3) / 4); }
+
+  /* Студия: 4 колонки */
+  .studio__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .reviews__track > a { flex: 0 0 360px; }
-  .gallery__item { flex: 0 0 420px; }
 }
 
 /* =========================================================
@@ -1255,6 +1347,9 @@ h2 {
    ========================================================= */
 @media (min-width: 1200px) {
   .nav__list { gap: 1.75rem; }
+
+  /* Работы: 5 карточек */
+  .work { flex: 0 0 calc((100% - var(--cards-gap) * 4) / 5); }
 }
 
 /* =========================================================
@@ -1287,7 +1382,6 @@ h2 {
 /* =========================================================
    Cookie-баннер
    ========================================================= */
-
 .cookie-banner {
   position: fixed;
   left: var(--container-pad);
@@ -1306,7 +1400,7 @@ h2 {
   opacity: 0;
   transform: translateY(16px) scale(0.98);
   animation: cookie-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 0.6s; /* появляется не сразу — не бьёт по глазам при загрузке */
+  animation-delay: 0.6s;
 }
 .cookie-banner[hidden] { display: none; }
 
@@ -1371,8 +1465,6 @@ h2 {
   transform: translateY(-1px);
 }
 
-/* На мобильных — карточка растягивается почти на всю ширину,
-   но отступы по краям остаются, чтобы она не выглядела как полоса */
 @media (max-width: 480px) {
   .cookie-banner {
     left: var(--container-pad);
@@ -1381,7 +1473,6 @@ h2 {
   }
 }
 
-/* Кто отключил анимации — просто показываем без движения */
 @media (prefers-reduced-motion: reduce) {
   .cookie-banner {
     animation: none;
