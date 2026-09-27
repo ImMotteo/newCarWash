@@ -1191,7 +1191,7 @@ h2 {
 
   /* Текст про 152-ФЗ — мельче и компактнее */
   .reviews__lead {
-    font-size: 0.8rem;
+    font-size: 0.3rem;
     line-height: 1.4;
     margin-bottom: 0;
   }
