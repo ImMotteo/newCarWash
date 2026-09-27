@@ -152,6 +152,7 @@ section[id] {
 .reviews__lead {
   max-width: none;
   margin-right: var(--container-pad);
+  font-size: 1rem;
 }
 
 h1 {
@@ -283,6 +284,7 @@ h2 {
 .welcome {
   min-height: 100svh;
   padding-top: var(--header-h);
+  padding-bottom: 6rem;
   background-image: url('./img/header_background.png');
   background-position: center;
   background-size: cover;
@@ -317,48 +319,42 @@ h2 {
 }
 
 /* =========================================================
-   Welcome: волна по нижнему краю + кликабельная стрелка
+   Welcome: кликабельная стрелка в кружочке
    ========================================================= */
-.welcome__wave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 200px;
-  display: block;
-  pointer-events: none;
-  z-index: 1;
-}
-
 .welcome__arrow {
   position: absolute;
   left: 50%;
-  bottom: 60px;
-  width: 44px;
-  height: 44px;
+  bottom: 32px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--main-color);
   z-index: 2;
   transform: translateX(-50%);
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  background: rgba(6, 8, 9, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   animation: welcome-arrow 2.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-  transition: color 0.25s ease;
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
 .welcome__arrow:hover {
   color: var(--accent);
+  background: rgba(81, 155, 96, 0.15);
 }
 
 .welcome__arrow svg {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 @keyframes welcome-arrow {
-  0%, 100% { transform: translate(-50%, 0);    opacity: 0.6; }
-  50%      { transform: translate(-50%, 12px); opacity: 1;   }
+  0%, 100% { transform: translate(-50%, 0);    opacity: 0.7; }
+  50%      { transform: translate(-50%, 10px); opacity: 1;   }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1178,40 +1174,26 @@ h2 {
 }
 
 /* =========================================================
-   Мобильные (до 767px) — компактный hero, отзывы,
-   стрелка в круге вместо волны, уменьшенные контролы карусели
+   Мобильные (до 767px) — крупный H1, компактный отзыв,
+   уменьшенный текст про ФЗ, уменьшенные контролы карусели
    ========================================================= */
 @media (max-width: 767px) {
   .welcome {
     min-height: auto;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 7.1vw, 2.5rem);
+    font-size: clamp(2.25rem, 9vw, 3rem);
     margin-bottom: 1rem;
     line-height: 1.05;
   }
 
-  /* На мобильном волну прячем полностью */
-  .welcome__wave {
-    display: none;
-  }
-
-  /* Стрелка — в круге, ближе к низу секции */
-  .welcome__arrow {
-    bottom: 24px;
-    width: 52px;
-    height: 52px;
-    border: 1.5px solid var(--accent);
-    border-radius: 50%;
-    background: rgba(6, 8, 9, 0.6);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-  }
-  .welcome__arrow svg {
-    width: 22px;
-    height: 22px;
+  /* Текст про 152-ФЗ — мельче и компактнее */
+  .reviews__lead {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0;
   }
 
   /* Компактные карточки отзывов */
@@ -1243,6 +1225,17 @@ h2 {
   .reviews__controls,
   .works__controls {
     gap: 0.35rem;
+  }
+
+  /* Стрелка в круге — компактнее */
+  .welcome__arrow {
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+  }
+  .welcome__arrow svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
