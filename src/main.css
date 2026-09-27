@@ -301,9 +301,9 @@ h2 {
 .hero { width: 100%; position: relative; z-index: 1; }
 .hero__container {
   display: grid;
-  gap: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  gap: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   padding-right: 0;
 }
 .hero h1 {
@@ -334,7 +334,7 @@ h2 {
 .welcome__arrow {
   position: absolute;
   left: 50%;
-  bottom: 32px;
+  bottom: 60px;
   width: 44px;
   height: 44px;
   display: flex;
@@ -424,6 +424,7 @@ h2 {
 
 .reviews__track {
   display: flex;
+  flex-wrap: nowrap;
   gap: var(--cards-gap);
   overflow-x: auto;
   overflow-y: hidden;
@@ -439,6 +440,9 @@ h2 {
 .reviews__track > a {
   display: block;
   flex: 0 0 78%;
+  flex-shrink: 0;
+  width: 78%;
+  max-width: 78%;
   scroll-snap-align: start;
   color: inherit;
   transition: transform 0.3s ease;
@@ -876,6 +880,7 @@ h2 {
 
 .works__track {
   display: flex;
+  flex-wrap: nowrap;
   gap: var(--cards-gap);
   overflow-x: auto;
   overflow-y: hidden;
@@ -889,6 +894,10 @@ h2 {
 
 .work {
   flex: 0 0 78%;
+  flex-shrink: 0;
+  width: 78%;
+  max-width: 78%;
+  min-width: 0;
   scroll-snap-align: start;
   position: relative;
   overflow: hidden;
@@ -1169,10 +1178,50 @@ h2 {
 }
 
 /* =========================================================
+   Мобильные (до 767px) — компактный hero и отзывы
+   ========================================================= */
+@media (max-width: 767px) {
+  .welcome {
+    min-height: auto;
+    padding-bottom: 7rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    margin-bottom: 1rem;
+    line-height: 1.05;
+  }
+
+  .review {
+    min-height: auto;
+    padding: 0.85rem;
+    gap: 0.5rem;
+  }
+  .review__avatar {
+    width: 48px;
+    height: 48px;
+  }
+  .review__text {
+    font-size: 0.95rem;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    max-height: calc(1.45em * 4);
+  }
+  .review__author {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
    ≥ 480px
    ========================================================= */
 @media (min-width: 480px) {
-  .reviews__track > a { flex: 0 0 65%; }
+  .reviews__track > a {
+    flex: 0 0 65%;
+    flex-shrink: 0;
+    width: 65%;
+    max-width: 65%;
+  }
 
   .services__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1181,7 +1230,12 @@ h2 {
   .service-item__title { font-size: 1rem; }
 
   /* Работы: 2 карточки */
-  .work { flex: 0 0 calc((100% - var(--cards-gap)) / 2); }
+  .work {
+    flex: 0 0 calc((100% - var(--cards-gap)) / 2);
+    flex-shrink: 0;
+    width: calc((100% - var(--cards-gap)) / 2);
+    max-width: none;
+  }
 }
 
 /* =========================================================
@@ -1201,6 +1255,8 @@ h2 {
     grid-template-columns: 1fr 1.2fr;
     text-align: left;
     gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   /* О нас: две колонки */
@@ -1243,7 +1299,12 @@ h2 {
   }
 
   /* Работы: 3 карточки */
-  .work { flex: 0 0 calc((100% - var(--cards-gap) * 2) / 3); }
+  .work {
+    flex: 0 0 calc((100% - var(--cards-gap) * 2) / 3);
+    flex-shrink: 0;
+    width: calc((100% - var(--cards-gap) * 2) / 3);
+    max-width: none;
+  }
 
   /* Студия: 3 колонки */
   .studio__grid {
@@ -1265,7 +1326,12 @@ h2 {
     align-items: center;
   }
 
-  .reviews__track > a { flex: 0 0 320px; }
+  .reviews__track > a {
+    flex: 0 0 320px;
+    flex-shrink: 0;
+    width: 320px;
+    max-width: 320px;
+  }
 
   .lightbox__nav {
     width: 52px;
@@ -1332,14 +1398,24 @@ h2 {
   }
 
   /* Работы: 4 карточки */
-  .work { flex: 0 0 calc((100% - var(--cards-gap) * 3) / 4); }
+  .work {
+    flex: 0 0 calc((100% - var(--cards-gap) * 3) / 4);
+    flex-shrink: 0;
+    width: calc((100% - var(--cards-gap) * 3) / 4);
+    max-width: none;
+  }
 
   /* Студия: 4 колонки */
   .studio__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .reviews__track > a { flex: 0 0 360px; }
+  .reviews__track > a {
+    flex: 0 0 360px;
+    flex-shrink: 0;
+    width: 360px;
+    max-width: 360px;
+  }
 }
 
 /* =========================================================
@@ -1349,7 +1425,12 @@ h2 {
   .nav__list { gap: 1.75rem; }
 
   /* Работы: 5 карточек */
-  .work { flex: 0 0 calc((100% - var(--cards-gap) * 4) / 5); }
+  .work {
+    flex: 0 0 calc((100% - var(--cards-gap) * 4) / 5);
+    flex-shrink: 0;
+    width: calc((100% - var(--cards-gap) * 4) / 5);
+    max-width: none;
+  }
 }
 
 /* =========================================================
