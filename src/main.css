@@ -254,7 +254,6 @@ h2 { font-size: clamp(1.25rem, 3vw, 1.75rem); letter-spacing: 0.07em; }
 .reviews__star { display: inline-flex; align-items: center; gap: 0.2rem; color: #fc0; }
 .reviews__controls { display: flex; gap: 0.5rem; flex-shrink: 0; margin-right: var(--container-pad); }
 .reviews__arrow {
-  padding-bottom: 4px;
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
@@ -503,7 +502,7 @@ h2 { font-size: clamp(1.25rem, 3vw, 1.75rem); letter-spacing: 0.07em; }
 .calc__group--open .calc__group-arrow { transform: rotate(180deg); }
 
 .calc__group-items-wrap { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-.calc__group-items { display: grid; grid-template-columns: 1fr; gap: 0.85rem; padding: 0;}
+.calc__group-items { display: grid; grid-template-columns: 1fr; gap: 0.85rem; padding: 1rem;}
 
 .calc__item {
   position: relative;
@@ -895,7 +894,6 @@ h2 { font-size: clamp(1.25rem, 3vw, 1.75rem); letter-spacing: 0.07em; }
   width: 44px;
   height: 44px;
   font-size: 1rem;
-  padding-left: 3px;
 }
 .work:hover .work__zoom--video { opacity: 1; transform: translateY(0) scale(1.08); }
 
