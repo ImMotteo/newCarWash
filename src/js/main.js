@@ -367,6 +367,18 @@
     if (lightboxNext) lightboxNext.style.display = single ? "none" : "flex";
   }
 
+  function lockScroll() {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    document.body.style.touchAction = "none";
+  }
+
+  function unlockScroll() {
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+    document.body.style.touchAction = "";
+  }
+
   function openLightbox(groupKey, index) {
     const group = lightboxGroups.get(groupKey);
     if (!lightbox || !group || index < 0 || index >= group.length) return;
@@ -375,7 +387,7 @@
     renderLightbox();
     lightbox.classList.add("lightbox--open");
     lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    lockScroll();
     lightboxTrap?.activate();
   }
 
@@ -386,7 +398,7 @@
     resetLightboxStage();
     currentGroupKey = null;
     currentIndex = -1;
-    document.body.style.overflow = "";
+    unlockScroll();
     lightboxTrap?.deactivate();
   }
 
@@ -651,7 +663,7 @@
 
     serviceModal.classList.add("service-modal--open");
     serviceModal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    lockScroll();
     serviceModalTrap?.activate();
   }
 
@@ -660,7 +672,7 @@
     serviceModal.classList.remove("service-modal--open");
     serviceModal.setAttribute("aria-hidden", "true");
     serviceModalImg.removeAttribute("src");
-    document.body.style.overflow = "";
+    unlockScroll();
     serviceModalTrap?.deactivate();
   }
 
