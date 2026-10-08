@@ -763,39 +763,42 @@
      Cookie-баннер + Яндекс.Метрика
   ------------------------------------------------------------------ */
   (function initMetrika() {
-    const METRIKA_ID = "00000000";
+    const METRIKA_ID = "113567649";
     const STORAGE_KEY = "cookie-consent";
     const banner = $("#cookieBanner");
 
     let loaded = false;
 
     function loadMetrika() {
-      if (loaded) return;
-      if (!METRIKA_ID || METRIKA_ID === "00000000") return;
-      if (window.ym && typeof window.ym === "function" && window.ym.a) return;
+  if (loaded) return;
+  if (!METRIKA_ID || METRIKA_ID === "00000000") return;  // ← заглушка, не реальный ID
+  if (window.ym && typeof window.ym === "function" && window.ym.a) return;
 
-      (function (m, e, t, r, i, k, a) {
-        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
-        m[i].l = 1 * new Date();
-        for (let j = 0; j < document.scripts.length; j++) {
-          if (document.scripts[j].src === r) return;
-        }
-        k = e.createElement(t);
-        a = e.getElementsByTagName(t)[0];
-        k.async = 1;
-        k.src = r;
-        a.parentNode.insertBefore(k, a);
-      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-      window.ym(METRIKA_ID, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true,
-      });
-
-      loaded = true;
+  (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+    m[i].l = 1 * new Date();
+    for (let j = 0; j < document.scripts.length; j++) {
+      if (document.scripts[j].src === r) return;
     }
+    k = e.createElement(t);
+    a = e.getElementsByTagName(t)[0];
+    k.async = 1;
+    k.src = r;
+    a.parentNode.insertBefore(k, a);
+  })(window, document, "script",
+     "https://mc.yandex.ru/metrika/tag.js?id=" + METRIKA_ID, "ym");
+
+  window.ym(METRIKA_ID, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    webvisor: true,
+    referrer: document.referrer,
+    url: location.href,
+  });
+
+  loaded = true;
+}
 
     function setConsent(value) {
       try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
